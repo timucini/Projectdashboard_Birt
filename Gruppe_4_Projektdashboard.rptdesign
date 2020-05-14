@@ -2606,9 +2606,6 @@
                                         <data id="92">
                                             <property name="resultSetColumn">project_id</property>
                                         </data>
-                                        <data id="93">
-                                            <property name="resultSetColumn">id</property>
-                                        </data>
                                     </cell>
                                 </row>
                             </grid>
