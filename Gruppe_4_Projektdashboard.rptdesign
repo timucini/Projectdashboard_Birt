@@ -1947,6 +1947,12 @@
                     <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
                     <text-property name="heading">_ID (projects_id) [Projekt]</text-property>
                 </structure>
+                <structure>
+                    <property name="columnName">name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Name</text-property>
+                    <text-property name="heading">Name</text-property>
+                </structure>
             </list-property>
             <list-property name="parameters">
                 <structure>
@@ -2071,6 +2077,11 @@
                         <property name="name">project_id</property>
                         <property name="dataType">string</property>
                     </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">name</property>
+                        <property name="dataType">string</property>
+                    </structure>
                 </list-property>
             </structure>
             <property name="dataSource">Data Source</property>
@@ -2103,8 +2114,15 @@
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">name</property>
+                    <property name="nativeName">name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[{/tasks}#:#{id#,#String#,#/@id#,##,#_ID (tasks_id)};{progress_subjective#,#Double#,#/@progress_subjective#,##,#Fertigstellung Ist};{task_data_date_to_as_date#,#Date#,##R#/task_data/@date_to_as_date#,##,#Enddatum [Aktivitätendaten (zeitraumbezogen)]};{project_id#,#String#,##R#/project/@id#,##,#_ID (projects_id) [Projekt]}#:#]]></xml-property>
+            <xml-property name="queryText"><![CDATA[{/tasks}#:#{id#,#String#,#/@id#,##,#_ID (tasks_id)};{progress_subjective#,#Double#,#/@progress_subjective#,##,#Fertigstellung Ist};{task_data_date_to_as_date#,#Date#,##R#/task_data/@date_to_as_date#,##,#Enddatum [Aktivitätendaten (zeitraumbezogen)]};{project_id#,#String#,##R#/project/@id#,##,#_ID (projects_id) [Projekt]};{name#,#String#,#/@name#,##,#Name}#:#]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -2562,7 +2580,7 @@
                         </group>
                         <detail>
                             <grid name="Grid_Hauptliste_Detail" id="87">
-                                <property name="height">0.9583333333333334in</property>
+                                <property name="height">1.8541666666666667in</property>
                                 <property name="dataSet">Aktivitäten</property>
                                 <list-property name="paramBindings">
                                     <structure>
@@ -2601,11 +2619,59 @@
                                 </list-property>
                                 <column id="88"/>
                                 <row id="89">
-                                    <property name="height">0.9583333333333334in</property>
+                                    <property name="height">1.8541666666666667in</property>
                                     <cell id="90">
                                         <data id="92">
                                             <property name="resultSetColumn">project_id</property>
                                         </data>
+                                        <list id="94">
+                                            <property name="dataSet">Aktivitäten</property>
+                                            <list-property name="paramBindings">
+                                                <structure>
+                                                    <property name="paramName">project_id</property>
+                                                    <simple-property-list name="expression">
+                                                        <value type="javascript">row._outer["id"]</value>
+                                                    </simple-property-list>
+                                                </structure>
+                                            </list-property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">id</property>
+                                                    <text-property name="displayName">_ID (tasks_id)</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">progress_subjective</property>
+                                                    <text-property name="displayName">Fertigstellung Ist</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
+                                                    <property name="dataType">float</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">task_data_date_to_as_date</property>
+                                                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
+                                                    <property name="dataType">date</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">project_id</property>
+                                                    <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">name</property>
+                                                    <text-property name="displayName">Name</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <detail>
+                                                <data id="95">
+                                                    <property name="resultSetColumn">name</property>
+                                                </data>
+                                            </detail>
+                                        </list>
                                     </cell>
                                 </row>
                             </grid>
