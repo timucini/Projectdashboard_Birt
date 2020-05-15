@@ -2489,6 +2489,915 @@
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
         </oda-data-set>
+        <oda-data-set extensionID="net.proventis.report.birt.driver.dataSet" name="ToDos" id="245">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_ID (todos_id)</text-property>
+                    <text-property name="heading">_ID (todos_id)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">owner_last_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Nachname [Verantwortlicher]</text-property>
+                    <text-property name="heading">Nachname [Verantwortlicher]</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">owner_full_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Name [Verantwortlicher]</text-property>
+                    <text-property name="heading">Name [Verantwortlicher]</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">project_id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_ID (projects_id) [ToDo-Liste > Projekt]</text-property>
+                    <text-property name="heading">_ID (projects_id) [ToDo-Liste > Projekt]</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Beschreibung</text-property>
+                    <text-property name="heading">Beschreibung</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">due_date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Fälligkeitsdatum</text-property>
+                    <text-property name="heading">Fälligkeitsdatum</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">state_overdue</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">state_overdue</text-property>
+                    <text-property name="heading">state_overdue</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">todo_list_id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_ID (todo_lists_id) [ToDo-Liste]</text-property>
+                    <text-property name="heading">_ID (todo_lists_id) [ToDo-Liste]</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">creator_id</property>
+                    <property name="nativeName">creator_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">6</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">editor_id</property>
+                    <property name="nativeName">editor_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">4</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">ignore_filtered_results</property>
+                    <property name="nativeName">ignore_filtered_results</property>
+                    <property name="nativeDataType">16</property>
+                    <property name="position">8</property>
+                    <expression name="defaultValue" type="constant">false</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">owner_id</property>
+                    <property name="nativeName">owner_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">task_id</property>
+                    <property name="nativeName">task_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">5</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">todo_list_id</property>
+                    <property name="nativeName">todo_list_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">7</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">virtual_head_id</property>
+                    <property name="nativeName">virtual_head_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">3</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">owner_last_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">owner_full_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">project_id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">due_date</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">state_overdue</property>
+                        <property name="dataType">boolean</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">todo_list_id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">owner_last_name</property>
+                    <property name="nativeName">owner_last_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">owner_full_name</property>
+                    <property name="nativeName">owner_full_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">project_id</property>
+                    <property name="nativeName">project_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">description</property>
+                    <property name="nativeName">description</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">due_date</property>
+                    <property name="nativeName">due_date</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">state_overdue</property>
+                    <property name="nativeName">state_overdue</property>
+                    <property name="dataType">boolean</property>
+                    <property name="nativeDataType">16</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">todo_list_id</property>
+                    <property name="nativeName">todo_list_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{/todos}#:#{id#,#String#,#/@id#,##,#_ID (todos_id)};{owner_last_name#,#String#,##R#/owner/@last_name#,##,#Nachname [Verantwortlicher]};{owner_full_name#,#String#,##R#/owner/@full_name#,##,#Name [Verantwortlicher]};{project_id#,#String#,##R#/todo_list/project/@id#,##,#_ID (projects_id) [ToDo-Liste > Projekt]};{description#,#String#,#/@description#,##,#Beschreibung};{due_date#,#Timestamp#,#/@due_date#,##,#Fälligkeitsdatum};{state_overdue#,#Boolean#,#/@state_overdue#,##,#state_overdue};{todo_list_id#,#String#,##R#/todo_list/@id#,##,#_ID (todo_lists_id) [ToDo-Liste]}#:#]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>id</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>owner_id</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>virtual_head_id</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>editor_id</design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>task_id</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>creator_id</design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>todo_list_id</design:name>
+            <design:position>7</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>ignore_filtered_results</design:name>
+            <design:position>8</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>false</design:values>
+              <design:values>false</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>_ID (todos_id)</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_ID (todos_id)</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>owner_last_name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Nachname [Verantwortlicher]</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Nachname [Verantwortlicher]</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>owner_full_name</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Name [Verantwortlicher]</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Name [Verantwortlicher]</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>project_id</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>_ID (projects_id) [ToDo-Liste > Projekt]</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_ID (projects_id) [ToDo-Liste > Projekt]</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>description</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Beschreibung</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Beschreibung</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>due_date</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Fälligkeitsdatum</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Fälligkeitsdatum</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>state_overdue</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>state_overdue</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>state_overdue</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="net.proventis.report.birt.driver.dataSet" name="ToDo-Liste" id="256">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <text-property name="displayName">_ID (todo_lists_id)</text-property>
+                    <text-property name="heading">_ID (todo_lists_id)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">project_id</property>
+                    <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
+                    <text-property name="heading">_ID (projects_id) [Projekt]</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">project_id</property>
+                    <property name="nativeName">project_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">editor_id</property>
+                    <property name="nativeName">editor_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">3</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">default_task_id</property>
+                    <property name="nativeName">default_task_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">4</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">ticket_id</property>
+                    <property name="nativeName">ticket_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">5</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">ignore_filtered_results</property>
+                    <property name="nativeName">ignore_filtered_results</property>
+                    <property name="nativeDataType">16</property>
+                    <property name="position">6</property>
+                    <expression name="defaultValue" type="constant">false</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">project_id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">project_id</property>
+                    <property name="nativeName">project_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{/todo_lists}#:#{id#,#String#,#/@id#,##,#_ID (todo_lists_id)};{project_id#,#String#,##R#/project/@id#,##,#_ID (projects_id) [Projekt]}#:#]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>id</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>project_id</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>editor_id</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>default_task_id</design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>ticket_id</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>ignore_filtered_results</design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>false</design:values>
+              <design:values>false</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>_ID (todo_lists_id)</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_ID (todo_lists_id)</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>project_id</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>_ID (projects_id) [Projekt]</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_ID (projects_id) [Projekt]</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
     </data-sets>
     <styles>
         <style name="report" id="4">
@@ -2537,10 +3446,10 @@
     <body>
         <grid name="Haupt-Grid-Seite" id="62">
             <text-property name="displayName">Haupt-Grid</text-property>
-            <property name="height">9.5in</property>
+            <property name="height">8.90625in</property>
             <column id="63"/>
             <row id="64">
-                <property name="height">9.5in</property>
+                <property name="height">8.90625in</property>
                 <cell id="65">
                     <list name="Haupt-Liste-Projekte" id="66">
                         <property name="dataSet">Projektdaten</property>
@@ -2710,7 +3619,7 @@
                         </group>
                         <detail>
                             <grid name="Grid_Hauptliste_Detail" id="87">
-                                <property name="height">2.3125in</property>
+                                <property name="height">7.510416666666667in</property>
                                 <property name="dataSet">Aktivitäten</property>
                                 <list-property name="paramBindings">
                                     <structure>
@@ -3255,6 +4164,311 @@
                                                         </cell>
                                                     </row>
                                                 </grid>
+                                            </detail>
+                                        </list>
+                                    </cell>
+                                </row>
+                                <row id="242">
+                                    <property name="height">2.8854166666666665in</property>
+                                    <cell id="243">
+                                        <list name="ToDo_Liste_Top5" id="246">
+                                            <property name="dataSet">ToDo-Liste</property>
+                                            <list-property name="paramBindings">
+                                                <structure>
+                                                    <property name="paramName">project_id</property>
+                                                    <simple-property-list name="expression">
+                                                        <value type="javascript">row._outer["id"]</value>
+                                                    </simple-property-list>
+                                                </structure>
+                                            </list-property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">id</property>
+                                                    <text-property name="displayName">_ID (todo_lists_id)</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">project_id</property>
+                                                    <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <header>
+                                                <text id="254">
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content"><![CDATA[Nächste ToDos]]></text-property>
+                                                </text>
+                                            </header>
+                                            <detail>
+                                                <list id="258">
+                                                    <property name="dataSet">ToDos</property>
+                                                    <list-property name="paramBindings">
+                                                        <structure>
+                                                            <property name="paramName">todo_list_id</property>
+                                                            <simple-property-list name="expression">
+                                                                <value type="javascript">row["id"]</value>
+                                                            </simple-property-list>
+                                                        </structure>
+                                                    </list-property>
+                                                    <list-property name="boundDataColumns">
+                                                        <structure>
+                                                            <property name="name">id</property>
+                                                            <text-property name="displayName">_ID (todos_id)</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">owner_last_name</property>
+                                                            <text-property name="displayName">Nachname [Verantwortlicher]</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["owner_last_name"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">owner_full_name</property>
+                                                            <text-property name="displayName">Name [Verantwortlicher]</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["owner_full_name"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">project_id</property>
+                                                            <text-property name="displayName">_ID (projects_id) [ToDo-Liste > Projekt]</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">description</property>
+                                                            <text-property name="displayName">Beschreibung</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">due_date</property>
+                                                            <text-property name="displayName">Fälligkeitsdatum</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["due_date"]</expression>
+                                                            <property name="dataType">date-time</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">state_overdue</property>
+                                                            <text-property name="displayName">state_overdue</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["state_overdue"]</expression>
+                                                            <property name="dataType">boolean</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">todo_list_id</property>
+                                                            <text-property name="displayName">_ID (todo_lists_id) [ToDo-Liste]</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["todo_list_id"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                    </list-property>
+                                                    <list-property name="filter">
+                                                        <structure>
+                                                            <property name="operator">is-false</property>
+                                                            <expression name="expr" type="javascript">row["state_overdue"]</expression>
+                                                            <property name="updateAggregation">true</property>
+                                                        </structure>
+                                                    </list-property>
+                                                    <detail>
+                                                        <grid id="259">
+                                                            <column id="260"/>
+                                                            <column id="261"/>
+                                                            <row id="262">
+                                                                <cell id="263">
+                                                                    <label id="271">
+                                                                        <property name="backgroundColor">#0080C0</property>
+                                                                        <property name="color">#FFFFFF</property>
+                                                                        <text-property name="text">ID</text-property>
+                                                                    </label>
+                                                                </cell>
+                                                                <cell id="264">
+                                                                    <data id="289">
+                                                                        <property name="resultSetColumn">id</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                            <row id="265">
+                                                                <cell id="266">
+                                                                    <label id="272">
+                                                                        <property name="backgroundColor">#0080C0</property>
+                                                                        <property name="color">#FFFFFF</property>
+                                                                        <text-property name="text">Verantwortlicher</text-property>
+                                                                    </label>
+                                                                </cell>
+                                                                <cell id="267">
+                                                                    <data id="290">
+                                                                        <property name="resultSetColumn">owner_last_name</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                            <row id="268">
+                                                                <cell id="269">
+                                                                    <label id="273">
+                                                                        <property name="backgroundColor">#0080C0</property>
+                                                                        <property name="color">#FFFFFF</property>
+                                                                        <text-property name="text">Fälligkeitsdatum</text-property>
+                                                                    </label>
+                                                                </cell>
+                                                                <cell id="270">
+                                                                    <data id="291">
+                                                                        <property name="resultSetColumn">due_date</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                        </grid>
+                                                    </detail>
+                                                </list>
+                                            </detail>
+                                        </list>
+                                    </cell>
+                                    <cell id="244">
+                                        <list name="ToDo_Liste" id="247">
+                                            <property name="dataSet">ToDo-Liste</property>
+                                            <list-property name="paramBindings">
+                                                <structure>
+                                                    <property name="paramName">project_id</property>
+                                                    <simple-property-list name="expression">
+                                                        <value type="javascript">row._outer["id"]</value>
+                                                    </simple-property-list>
+                                                </structure>
+                                            </list-property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">id</property>
+                                                    <text-property name="displayName">_ID (todo_lists_id)</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">project_id</property>
+                                                    <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                            </list-property>
+                                            <header>
+                                                <text id="255">
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content"><![CDATA[Überfällige ToDos]]></text-property>
+                                                </text>
+                                            </header>
+                                            <detail>
+                                                <list name="ToDos_overdue" id="257">
+                                                    <property name="dataSet">ToDos</property>
+                                                    <list-property name="paramBindings">
+                                                        <structure>
+                                                            <property name="paramName">todo_list_id</property>
+                                                            <simple-property-list name="expression">
+                                                                <value type="javascript">row["id"]</value>
+                                                            </simple-property-list>
+                                                        </structure>
+                                                    </list-property>
+                                                    <list-property name="boundDataColumns">
+                                                        <structure>
+                                                            <property name="name">id</property>
+                                                            <text-property name="displayName">_ID (todos_id)</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">owner_last_name</property>
+                                                            <text-property name="displayName">Nachname [Verantwortlicher]</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["owner_last_name"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">owner_full_name</property>
+                                                            <text-property name="displayName">Name [Verantwortlicher]</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["owner_full_name"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">project_id</property>
+                                                            <text-property name="displayName">_ID (projects_id) [ToDo-Liste > Projekt]</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">description</property>
+                                                            <text-property name="displayName">Beschreibung</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">due_date</property>
+                                                            <text-property name="displayName">Fälligkeitsdatum</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["due_date"]</expression>
+                                                            <property name="dataType">date-time</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">state_overdue</property>
+                                                            <text-property name="displayName">state_overdue</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["state_overdue"]</expression>
+                                                            <property name="dataType">boolean</property>
+                                                        </structure>
+                                                        <structure>
+                                                            <property name="name">todo_list_id</property>
+                                                            <text-property name="displayName">_ID (todo_lists_id) [ToDo-Liste]</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["todo_list_id"]</expression>
+                                                            <property name="dataType">string</property>
+                                                        </structure>
+                                                    </list-property>
+                                                    <list-property name="filter">
+                                                        <structure>
+                                                            <property name="operator">is-true</property>
+                                                            <expression name="expr" type="javascript">row["state_overdue"]</expression>
+                                                            <property name="updateAggregation">true</property>
+                                                        </structure>
+                                                    </list-property>
+                                                    <detail>
+                                                        <grid id="274">
+                                                            <column id="275"/>
+                                                            <column id="276"/>
+                                                            <row id="277">
+                                                                <cell id="278">
+                                                                    <label id="286">
+                                                                        <property name="backgroundColor">#0080C0</property>
+                                                                        <property name="color">#FFFFFF</property>
+                                                                        <text-property name="text">ID</text-property>
+                                                                    </label>
+                                                                </cell>
+                                                                <cell id="279">
+                                                                    <data id="292">
+                                                                        <property name="resultSetColumn">id</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                            <row id="280">
+                                                                <cell id="281">
+                                                                    <label id="287">
+                                                                        <property name="backgroundColor">#0080C0</property>
+                                                                        <property name="color">#FFFFFF</property>
+                                                                        <text-property name="text">Verantwortlicher</text-property>
+                                                                    </label>
+                                                                </cell>
+                                                                <cell id="282">
+                                                                    <data id="293">
+                                                                        <property name="resultSetColumn">owner_last_name</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                            <row id="283">
+                                                                <cell id="284">
+                                                                    <label id="288">
+                                                                        <property name="backgroundColor">#0080C0</property>
+                                                                        <property name="color">#FFFFFF</property>
+                                                                        <text-property name="text">Fälligkeitsdatum</text-property>
+                                                                    </label>
+                                                                </cell>
+                                                                <cell id="285">
+                                                                    <data id="294">
+                                                                        <property name="resultSetColumn">due_date</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                        </grid>
+                                                    </detail>
+                                                </list>
                                             </detail>
                                         </list>
                                     </cell>
