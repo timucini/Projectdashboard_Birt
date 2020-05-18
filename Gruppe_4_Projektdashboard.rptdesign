@@ -66,6 +66,48 @@
                     <text-property name="displayName">Name</text-property>
                     <text-property name="heading">Name</text-property>
                 </structure>
+                <structure>
+                    <property name="columnName">person_last_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Nachname [Projektleiter > Person]</text-property>
+                    <text-property name="heading">Nachname [Projektleiter > Person]</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">person_full_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Name [Projektleiter > Person]</text-property>
+                    <text-property name="heading">Name [Projektleiter > Person]</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">date_to</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Projektende</text-property>
+                    <text-property name="heading">Projektende</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">date_from</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Projektstart</text-property>
+                    <text-property name="heading">Projektstart</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">hint_state_change</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Bemerkung letzer Statuswechsel</text-property>
+                    <text-property name="heading">Bemerkung letzer Statuswechsel</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">data_interface_project_budget_actual</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]</text-property>
+                    <text-property name="heading">Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">data_interface_project_budget_plan</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]</text-property>
+                    <text-property name="heading">Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]</text-property>
+                </structure>
             </list-property>
             <list-property name="parameters">
                 <structure>
@@ -84,7 +126,7 @@
                     <property name="nativeName">end_date_from</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
-                    <property name="position">2</property>
+                    <property name="position">7</property>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
                     <property name="isInput">true</property>
@@ -94,7 +136,7 @@
                     <property name="nativeName">end_date_to</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
-                    <property name="position">3</property>
+                    <property name="position">8</property>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
                     <property name="isInput">true</property>
@@ -104,7 +146,7 @@
                     <property name="nativeName">start_date_from</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
-                    <property name="position">4</property>
+                    <property name="position">15</property>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
                     <property name="isInput">true</property>
@@ -114,7 +156,7 @@
                     <property name="nativeName">start_date_to</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
-                    <property name="position">5</property>
+                    <property name="position">16</property>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
                     <property name="isInput">true</property>
@@ -124,7 +166,7 @@
                     <property name="nativeName">use_all_projects</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
-                    <property name="position">6</property>
+                    <property name="position">17</property>
                     <expression name="defaultValue" type="constant">false</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -135,7 +177,7 @@
                     <property name="nativeName">virtual_included</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
-                    <property name="position">7</property>
+                    <property name="position">18</property>
                     <expression name="defaultValue" type="constant">false</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -146,7 +188,7 @@
                     <property name="nativeName">portfolio_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">8</property>
+                    <property name="position">13</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -168,7 +210,7 @@
                     <property name="nativeName">currency_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">10</property>
+                    <property name="position">3</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -179,7 +221,7 @@
                     <property name="nativeName">department_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">11</property>
+                    <property name="position">5</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -201,7 +243,7 @@
                     <property name="nativeName">baseline_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">13</property>
+                    <property name="position">2</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -223,7 +265,7 @@
                     <property name="nativeName">data_interface_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">15</property>
+                    <property name="position">4</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -234,7 +276,7 @@
                     <property name="nativeName">department_max_share_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">16</property>
+                    <property name="position">6</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -245,7 +287,7 @@
                     <property name="nativeName">manager_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">17</property>
+                    <property name="position">11</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -256,7 +298,7 @@
                     <property name="nativeName">ignore_filtered_results</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
-                    <property name="position">18</property>
+                    <property name="position">10</property>
                     <expression name="defaultValue" type="constant">false</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -607,6 +649,41 @@
                         <property name="name">name</property>
                         <property name="dataType">string</property>
                     </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">person_last_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">person_full_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">date_to</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">date_from</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">hint_state_change</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">data_interface_project_budget_actual</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">data_interface_project_budget_plan</property>
+                        <property name="dataType">float</property>
+                    </structure>
                 </list-property>
             </structure>
             <property name="dataSource">Data Source</property>
@@ -674,8 +751,57 @@
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">person_last_name</property>
+                    <property name="nativeName">person_last_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">person_full_name</property>
+                    <property name="nativeName">person_full_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">date_to</property>
+                    <property name="nativeName">date_to</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">date_from</property>
+                    <property name="nativeName">date_from</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">hint_state_change</property>
+                    <property name="nativeName">hint_state_change</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">data_interface_project_budget_actual</property>
+                    <property name="nativeName">data_interface_project_budget_actual</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">data_interface_project_budget_plan</property>
+                    <property name="nativeName">data_interface_project_budget_plan</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[{/projects}#:#{id#,#String#,#/@id#,##,#_ID (projects_id)};{type#,#String#,#/@type#,##,#Projektart};{manager_id#,#String#,##R#/manager/@id#,##,#_ID (staffs_id) [Projektleiter]};{state#,#String#,#/@state#,##,#Projektstatus};{internal#,#Boolean#,#/@internal#,##,#Projekttyp (intern/ extern)};{priority#,#String#,#/@priority#,##,#Priorität};{indicator_cockpit_costs#,#Blob#,#/@indicator_cockpit_costs#,##,#Ampel Cockpit Kosten};{indicator_cockpit_time#,#Blob#,#/@indicator_cockpit_time#,##,#Ampel Cockpit Zeit};{name#,#String#,#/@name#,##,#Name}#:#]]></xml-property>
+            <xml-property name="queryText"><![CDATA[{/projects}#:#{id#,#String#,#/@id#,##,#_ID (projects_id)};{type#,#String#,#/@type#,##,#Projektart};{manager_id#,#String#,##R#/manager/@id#,##,#_ID (staffs_id) [Projektleiter]};{state#,#String#,#/@state#,##,#Projektstatus};{internal#,#Boolean#,#/@internal#,##,#Projekttyp (intern/ extern)};{priority#,#String#,#/@priority#,##,#Priorität};{indicator_cockpit_costs#,#Blob#,#/@indicator_cockpit_costs#,##,#Ampel Cockpit Kosten};{indicator_cockpit_time#,#Blob#,#/@indicator_cockpit_time#,##,#Ampel Cockpit Zeit};{name#,#String#,#/@name#,##,#Name};{person_last_name#,#String#,##R#/manager/person/@last_name#,##,#Nachname [Projektleiter > Person]};{person_full_name#,#String#,##R#/manager/person/@full_name#,##,#Name [Projektleiter > Person]};{date_to#,#Date#,#/@date_to#,##,#Projektende};{date_from#,#Date#,#/@date_from#,##,#Projektstart};{hint_state_change#,#String#,#/@hint_state_change#,##,#Bemerkung letzer Statuswechsel};{data_interface_project_budget_actual#,#Double#,##R#/data_interface/@project_budget_actual#,##,#Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]};{data_interface_project_budget_plan#,#Double#,##R#/data_interface/@project_budget_plan#,##,#Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]}#:#]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -709,8 +835,128 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>end_date_from</design:name>
+            <design:name>baseline_id</design:name>
             <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>currency_id</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>data_interface_id</design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>department_id</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>department_max_share_id</design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>end_date_from</design:name>
+            <design:position>7</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
@@ -730,127 +976,15 @@
         <design:attributes>
           <design:identifier>
             <design:name>end_date_to</design:name>
-            <design:position>3</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>start_date_from</design:name>
-            <design:position>4</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>start_date_to</design:name>
-            <design:position>5</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>use_all_projects</design:name>
-            <design:position>6</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>false</design:values>
-              <design:values>false</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>virtual_included</design:name>
-            <design:position>7</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>false</design:values>
-              <design:values>false</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>portfolio_id</design:name>
             <design:position>8</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
         </design:attributes>
         <design:inputAttributes>
           <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
         </design:inputAttributes>
@@ -885,10 +1019,10 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>currency_id</design:name>
+            <design:name>ignore_filtered_results</design:name>
             <design:position>10</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
@@ -896,8 +1030,8 @@
         <design:inputAttributes>
           <design:elementAttributes>
             <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
+              <design:values>false</design:values>
+              <design:values>false</design:values>
             </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
@@ -909,7 +1043,7 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>department_id</design:name>
+            <design:name>manager_id</design:name>
             <design:position>11</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
@@ -957,7 +1091,7 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>baseline_id</design:name>
+            <design:name>portfolio_id</design:name>
             <design:position>13</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
@@ -1005,20 +1139,16 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>data_interface_id</design:name>
+            <design:name>start_date_from</design:name>
             <design:position>15</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
         </design:attributes>
         <design:inputAttributes>
           <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
         </design:inputAttributes>
@@ -1029,20 +1159,16 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>department_max_share_id</design:name>
+            <design:name>start_date_to</design:name>
             <design:position>16</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
         </design:attributes>
         <design:inputAttributes>
           <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
         </design:inputAttributes>
@@ -1053,10 +1179,10 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>manager_id</design:name>
+            <design:name>use_all_projects</design:name>
             <design:position>17</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
@@ -1064,8 +1190,8 @@
         <design:inputAttributes>
           <design:elementAttributes>
             <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
+              <design:values>false</design:values>
+              <design:values>false</design:values>
             </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
@@ -1077,7 +1203,7 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>ignore_filtered_results</design:name>
+            <design:name>virtual_included</design:name>
             <design:position>18</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
@@ -3435,6 +3561,7 @@
     </styles>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">landscape</property>
             <page-footer>
                 <text id="3">
                     <property name="contentType">html</property>
@@ -3446,10 +3573,10 @@
     <body>
         <grid name="Haupt-Grid-Seite" id="62">
             <text-property name="displayName">Haupt-Grid</text-property>
-            <property name="height">8.90625in</property>
+            <property name="height">7.885416666666667in</property>
             <column id="63"/>
             <row id="64">
-                <property name="height">8.90625in</property>
+                <property name="height">7.885416666666667in</property>
                 <cell id="65">
                     <list name="Haupt-Liste-Projekte" id="66">
                         <property name="dataSet">Projektdaten</property>
@@ -3508,6 +3635,48 @@
                                 <expression name="expression" type="javascript">dataSetRow["name"]</expression>
                                 <property name="dataType">string</property>
                             </structure>
+                            <structure>
+                                <property name="name">person_last_name</property>
+                                <text-property name="displayName">Nachname [Projektleiter > Person]</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["person_last_name"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">person_full_name</property>
+                                <text-property name="displayName">Name [Projektleiter > Person]</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["person_full_name"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">date_to</property>
+                                <text-property name="displayName">Projektende</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["date_to"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">date_from</property>
+                                <text-property name="displayName">Projektstart</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["date_from"]</expression>
+                                <property name="dataType">date</property>
+                            </structure>
+                            <structure>
+                                <property name="name">hint_state_change</property>
+                                <text-property name="displayName">Bemerkung letzer Statuswechsel</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["hint_state_change"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">data_interface_project_budget_actual</property>
+                                <text-property name="displayName">Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["data_interface_project_budget_actual"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">data_interface_project_budget_plan</property>
+                                <text-property name="displayName">Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["data_interface_project_budget_plan"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
                         </list-property>
                         <group id="67">
                             <property name="groupName">Gruppe_Projekt</property>
@@ -3518,108 +3687,215 @@
                             <property name="hideDetail">false</property>
                             <property name="pageBreakBefore">always</property>
                             <header>
-                                <grid id="69">
-                                    <property name="marginTop">5pt</property>
-                                    <property name="marginLeft">5pt</property>
-                                    <property name="marginBottom">5pt</property>
-                                    <property name="marginRight">5pt</property>
-                                    <property name="height">0.8645833333333334in</property>
-                                    <property name="width">7.729166666666667in</property>
-                                    <column id="70">
-                                        <property name="width">1.0416666666666667in</property>
+                                <data id="335">
+                                    <property name="fontSize">16pt</property>
+                                    <property name="color">#0000FF</property>
+                                    <property name="resultSetColumn">name</property>
+                                </data>
+                                <grid id="341">
+                                    <property name="width">10.229166666666666in</property>
+                                    <column id="342">
+                                        <property name="width">7.125in</property>
                                     </column>
-                                    <column id="71">
-                                        <property name="width">2.8333333333333335in</property>
+                                    <column id="343">
+                                        <property name="width">3.1041666666666665in</property>
                                     </column>
-                                    <column id="99">
-                                        <property name="width">1.0416666666666667in</property>
-                                    </column>
-                                    <column id="103">
-                                        <property name="width">2.8125in</property>
-                                    </column>
-                                    <row id="72">
-                                        <cell id="73">
-                                            <label id="81">
-                                                <property name="backgroundColor">#0080C0</property>
-                                                <property name="color">#FFFFFF</property>
-                                                <text-property name="text">Projektname</text-property>
-                                            </label>
+                                    <row id="344">
+                                        <cell id="345">
+                                            <grid id="69">
+                                                <property name="marginTop">5pt</property>
+                                                <property name="marginLeft">5pt</property>
+                                                <property name="marginBottom">5pt</property>
+                                                <property name="marginRight">5pt</property>
+                                                <property name="height">1in</property>
+                                                <property name="width">6.96875in</property>
+                                                <column id="70">
+                                                    <property name="width">1.1979166666666667in</property>
+                                                </column>
+                                                <column id="71">
+                                                    <property name="width">2.6770833333333335in</property>
+                                                </column>
+                                                <column id="99">
+                                                    <property name="width">1.0416666666666667in</property>
+                                                </column>
+                                                <column id="103">
+                                                    <property name="width">2.0520833333333335in</property>
+                                                </column>
+                                                <row id="72">
+                                                    <property name="height">0.2916666666666667in</property>
+                                                    <cell id="73">
+                                                        <label id="81">
+                                                            <property name="backgroundColor">#0080C0</property>
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="color">#FFFFFF</property>
+                                                            <text-property name="text">Projektleiter</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="74">
+                                                        <grid id="302">
+                                                            <column id="303"/>
+                                                            <column id="304"/>
+                                                            <row id="305">
+                                                                <cell id="306">
+                                                                    <data id="308">
+                                                                        <property name="fontSize">9pt</property>
+                                                                        <property name="resultSetColumn">person_full_name</property>
+                                                                    </data>
+                                                                </cell>
+                                                                <cell id="307">
+                                                                    <data id="309">
+                                                                        <property name="fontSize">9pt</property>
+                                                                        <property name="resultSetColumn">person_last_name</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                        </grid>
+                                                    </cell>
+                                                    <cell id="96">
+                                                        <label id="104">
+                                                            <property name="backgroundColor">#0080C0</property>
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="color">#FFFFFF</property>
+                                                            <text-property name="text">Priorität</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="100">
+                                                        <data id="123">
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="resultSetColumn">priority</property>
+                                                        </data>
+                                                    </cell>
+                                                </row>
+                                                <row id="75">
+                                                    <cell id="76">
+                                                        <label id="82">
+                                                            <property name="backgroundColor">#0080C0</property>
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="color">#FFFFFF</property>
+                                                            <text-property name="text">Projekt-ID</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="77">
+                                                        <data id="85">
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="resultSetColumn">id</property>
+                                                        </data>
+                                                    </cell>
+                                                    <cell id="97">
+                                                        <label id="105">
+                                                            <property name="backgroundColor">#0080C0</property>
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="color">#FFFFFF</property>
+                                                            <text-property name="text">Projektstatus</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="101">
+                                                        <data id="124">
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="resultSetColumn">state</property>
+                                                        </data>
+                                                    </cell>
+                                                </row>
+                                                <row id="78">
+                                                    <property name="height">0.21875in</property>
+                                                    <cell id="79">
+                                                        <label id="83">
+                                                            <property name="backgroundColor">#0080C0</property>
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="color">#FFFFFF</property>
+                                                            <text-property name="text">Projektart</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="80">
+                                                        <data id="86">
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="resultSetColumn">type</property>
+                                                        </data>
+                                                    </cell>
+                                                    <cell id="98">
+                                                        <label id="106">
+                                                            <property name="backgroundColor">#0080C0</property>
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="color">#FFFFFF</property>
+                                                            <text-property name="text">Zeitraum</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="102">
+                                                        <grid id="310">
+                                                            <column id="311"/>
+                                                            <column id="312"/>
+                                                            <row id="313">
+                                                                <cell id="314">
+                                                                    <data id="316">
+                                                                        <property name="fontSize">9pt</property>
+                                                                        <property name="resultSetColumn">date_from</property>
+                                                                    </data>
+                                                                </cell>
+                                                                <cell id="315">
+                                                                    <data id="317">
+                                                                        <property name="fontSize">9pt</property>
+                                                                        <property name="resultSetColumn">date_to</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                        </grid>
+                                                    </cell>
+                                                </row>
+                                                <row id="318">
+                                                    <property name="height">0.21875in</property>
+                                                    <cell id="319">
+                                                        <label id="323">
+                                                            <property name="backgroundColor">#0080C0</property>
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="color">#FFFFFF</property>
+                                                            <text-property name="text">Aktuelle Risiken</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="320">
+                                                        <data id="324">
+                                                            <property name="fontSize">9pt</property>
+                                                        </data>
+                                                    </cell>
+                                                    <cell id="321">
+                                                        <label id="325">
+                                                            <property name="backgroundColor">#0080C0</property>
+                                                            <property name="fontSize">9pt</property>
+                                                            <property name="color">#FFFFFF</property>
+                                                            <text-property name="text">Projektbudget</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="322">
+                                                        <grid id="326">
+                                                            <column id="327"/>
+                                                            <column id="328"/>
+                                                            <row id="329">
+                                                                <cell id="330">
+                                                                    <data id="332">
+                                                                        <property name="fontSize">9pt</property>
+                                                                        <property name="resultSetColumn">data_interface_project_budget_plan</property>
+                                                                    </data>
+                                                                </cell>
+                                                                <cell id="331">
+                                                                    <data id="333">
+                                                                        <property name="fontSize">9pt</property>
+                                                                        <property name="resultSetColumn">data_interface_project_budget_actual</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                        </grid>
+                                                    </cell>
+                                                </row>
+                                            </grid>
                                         </cell>
-                                        <cell id="74">
-                                            <data id="84">
-                                                <property name="resultSetColumn">name</property>
-                                            </data>
-                                        </cell>
-                                        <cell id="96">
-                                            <label id="104">
-                                                <property name="backgroundColor">#0080C0</property>
-                                                <property name="color">#FFFFFF</property>
-                                                <text-property name="text">Priorität</text-property>
-                                            </label>
-                                        </cell>
-                                        <cell id="100">
-                                            <data id="123">
-                                                <property name="resultSetColumn">priority</property>
-                                            </data>
-                                        </cell>
-                                    </row>
-                                    <row id="75">
-                                        <cell id="76">
-                                            <label id="82">
-                                                <property name="backgroundColor">#0080C0</property>
-                                                <property name="color">#FFFFFF</property>
-                                                <text-property name="text">Projekt-ID</text-property>
-                                            </label>
-                                        </cell>
-                                        <cell id="77">
-                                            <data id="85">
-                                                <property name="resultSetColumn">id</property>
-                                            </data>
-                                        </cell>
-                                        <cell id="97">
-                                            <label id="105">
-                                                <property name="backgroundColor">#0080C0</property>
-                                                <property name="color">#FFFFFF</property>
-                                                <text-property name="text">Projektstatus</text-property>
-                                            </label>
-                                        </cell>
-                                        <cell id="101">
-                                            <data id="124">
-                                                <property name="resultSetColumn">state</property>
-                                            </data>
-                                        </cell>
-                                    </row>
-                                    <row id="78">
-                                        <property name="height">0.3125in</property>
-                                        <cell id="79">
-                                            <label id="83">
-                                                <property name="backgroundColor">#0080C0</property>
-                                                <property name="color">#FFFFFF</property>
-                                                <text-property name="text">Projektart</text-property>
-                                            </label>
-                                        </cell>
-                                        <cell id="80">
-                                            <data id="86">
-                                                <property name="resultSetColumn">type</property>
-                                            </data>
-                                        </cell>
-                                        <cell id="98">
-                                            <label id="106">
-                                                <property name="backgroundColor">#0080C0</property>
-                                                <property name="color">#FFFFFF</property>
-                                                <text-property name="text">folgt noch</text-property>
-                                            </label>
-                                        </cell>
-                                        <cell id="102">
-                                            <data id="125"/>
-                                        </cell>
+                                        <cell id="346"/>
                                     </row>
                                 </grid>
                             </header>
                         </group>
                         <detail>
                             <grid name="Grid_Hauptliste_Detail" id="87">
-                                <property name="height">7.510416666666667in</property>
+                                <property name="height">6.395833333333333in</property>
+                                <property name="width">10.145833333333334in</property>
                                 <property name="dataSet">Aktivitäten</property>
                                 <list-property name="paramBindings">
                                     <structure>
@@ -3656,10 +3932,17 @@
                                         <property name="allowExport">true</property>
                                     </structure>
                                 </list-property>
-                                <column id="88"/>
-                                <column id="131"/>
+                                <column id="88">
+                                    <property name="width">3.5104166666666665in</property>
+                                </column>
+                                <column id="131">
+                                    <property name="width">3.3020833333333335in</property>
+                                </column>
+                                <column id="354">
+                                    <property name="width">3.3333333333333335in</property>
+                                </column>
                                 <row id="89">
-                                    <property name="height">2.3125in</property>
+                                    <property name="height">2.875in</property>
                                     <cell id="90">
                                         <list id="94">
                                             <property name="dataSet">Aktivitäten</property>
@@ -3792,130 +4075,6 @@
                                         </list>
                                     </cell>
                                     <cell id="130">
-                                        <list id="132">
-                                            <property name="dataSet">Aktivitäten</property>
-                                            <list-property name="boundDataColumns">
-                                                <structure>
-                                                    <property name="name">id</property>
-                                                    <text-property name="displayName">_ID (tasks_id)</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
-                                                    <property name="dataType">string</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">progress_subjective</property>
-                                                    <text-property name="displayName">Fertigstellung Ist</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
-                                                    <property name="dataType">float</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">task_data_date_to_as_date</property>
-                                                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
-                                                    <property name="dataType">date</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">project_id</property>
-                                                    <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
-                                                    <property name="dataType">string</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">name</property>
-                                                    <text-property name="displayName">Name</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
-                                                    <property name="dataType">string</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">date_to</property>
-                                                    <text-property name="displayName">Enddatum</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["date_to"]</expression>
-                                                    <property name="dataType">date</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">overdue</property>
-                                                    <text-property name="displayName">Überfällig?</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["overdue"]</expression>
-                                                    <property name="dataType">boolean</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">milestone</property>
-                                                    <text-property name="displayName">Meilenstein</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["milestone"]</expression>
-                                                    <property name="dataType">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <list-property name="filter">
-                                                <structure>
-                                                    <property name="operator">is-false</property>
-                                                    <expression name="expr" type="javascript">row["milestone"]</expression>
-                                                    <property name="updateAggregation">true</property>
-                                                </structure>
-                                            </list-property>
-                                            <header>
-                                                <text id="152">
-                                                    <property name="contentType">auto</property>
-                                                    <text-property name="content"><![CDATA[Überfällige Aktivitäten]]></text-property>
-                                                </text>
-                                            </header>
-                                            <detail>
-                                                <grid id="134">
-                                                    <property name="width">7.510416666666667in</property>
-                                                    <column id="135">
-                                                        <property name="width">1.0416666666666667in</property>
-                                                    </column>
-                                                    <column id="136">
-                                                        <property name="width">6.46875in</property>
-                                                    </column>
-                                                    <row id="137">
-                                                        <cell id="138">
-                                                            <label id="139">
-                                                                <property name="backgroundColor">#0080C0</property>
-                                                                <property name="color">#FFFFFF</property>
-                                                                <text-property name="text">Name</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="140">
-                                                            <data id="141">
-                                                                <property name="resultSetColumn">name</property>
-                                                            </data>
-                                                        </cell>
-                                                    </row>
-                                                    <row id="142">
-                                                        <cell id="143">
-                                                            <label id="144">
-                                                                <property name="backgroundColor">#0080C0</property>
-                                                                <property name="color">#FFFFFF</property>
-                                                                <text-property name="text">ID</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="145">
-                                                            <data id="146">
-                                                                <property name="resultSetColumn">id</property>
-                                                            </data>
-                                                        </cell>
-                                                    </row>
-                                                    <row id="147">
-                                                        <cell id="148">
-                                                            <label id="149">
-                                                                <property name="backgroundColor">#0080C0</property>
-                                                                <property name="color">#FFFFFF</property>
-                                                                <text-property name="text">Fertigstellung</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="150">
-                                                            <data id="151">
-                                                                <property name="resultSetColumn">progress_subjective</property>
-                                                            </data>
-                                                        </cell>
-                                                    </row>
-                                                </grid>
-                                            </detail>
-                                        </list>
-                                    </cell>
-                                </row>
-                                <row id="199">
-                                    <property name="height">2.3125in</property>
-                                    <cell id="200">
                                         <list id="202">
                                             <property name="dataSet">Aktivitäten</property>
                                             <list-property name="paramBindings">
@@ -3975,6 +4134,12 @@
                                                     <expression name="expression" type="javascript">dataSetRow["milestone"]</expression>
                                                     <property name="dataType">boolean</property>
                                                 </structure>
+                                                <structure>
+                                                    <property name="name">is_finished</property>
+                                                    <text-property name="displayName">Ist abgeschlossen</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["is_finished"]</expression>
+                                                    <property name="dataType">boolean</property>
+                                                </structure>
                                             </list-property>
                                             <list-property name="filter">
                                                 <structure>
@@ -3991,7 +4156,7 @@
                                             </header>
                                             <detail>
                                                 <grid id="204">
-                                                    <property name="height">0.84375in</property>
+                                                    <property name="height">0.9166666666666666in</property>
                                                     <property name="width">7.510416666666667in</property>
                                                     <column id="205">
                                                         <property name="width">1.0416666666666667in</property>
@@ -4028,7 +4193,7 @@
                                                         </cell>
                                                     </row>
                                                     <row id="217">
-                                                        <property name="height">0.2916666666666667in</property>
+                                                        <property name="height">0.3645833333333333in</property>
                                                         <cell id="218">
                                                             <label id="219">
                                                                 <property name="backgroundColor">#0080C0</property>
@@ -4046,131 +4211,7 @@
                                             </detail>
                                         </list>
                                     </cell>
-                                    <cell id="201">
-                                        <list id="222">
-                                            <property name="dataSet">Aktivitäten</property>
-                                            <list-property name="boundDataColumns">
-                                                <structure>
-                                                    <property name="name">id</property>
-                                                    <text-property name="displayName">_ID (tasks_id)</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
-                                                    <property name="dataType">string</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">progress_subjective</property>
-                                                    <text-property name="displayName">Fertigstellung Ist</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
-                                                    <property name="dataType">float</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">task_data_date_to_as_date</property>
-                                                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
-                                                    <property name="dataType">date</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">project_id</property>
-                                                    <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
-                                                    <property name="dataType">string</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">name</property>
-                                                    <text-property name="displayName">Name</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
-                                                    <property name="dataType">string</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">date_to</property>
-                                                    <text-property name="displayName">Enddatum</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["date_to"]</expression>
-                                                    <property name="dataType">date</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">overdue</property>
-                                                    <text-property name="displayName">Überfällig?</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["overdue"]</expression>
-                                                    <property name="dataType">boolean</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">milestone</property>
-                                                    <text-property name="displayName">Meilenstein</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["milestone"]</expression>
-                                                    <property name="dataType">boolean</property>
-                                                </structure>
-                                            </list-property>
-                                            <list-property name="filter">
-                                                <structure>
-                                                    <property name="operator">is-true</property>
-                                                    <expression name="expr" type="javascript">row["milestone"]</expression>
-                                                    <property name="updateAggregation">true</property>
-                                                </structure>
-                                            </list-property>
-                                            <header>
-                                                <text id="223">
-                                                    <property name="contentType">auto</property>
-                                                    <text-property name="content"><![CDATA[Überfällige Meilensteine]]></text-property>
-                                                </text>
-                                            </header>
-                                            <detail>
-                                                <grid id="224">
-                                                    <property name="width">7.510416666666667in</property>
-                                                    <column id="225">
-                                                        <property name="width">1.0416666666666667in</property>
-                                                    </column>
-                                                    <column id="226">
-                                                        <property name="width">6.46875in</property>
-                                                    </column>
-                                                    <row id="227">
-                                                        <cell id="228">
-                                                            <label id="229">
-                                                                <property name="backgroundColor">#0080C0</property>
-                                                                <property name="color">#FFFFFF</property>
-                                                                <text-property name="text">Name</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="230">
-                                                            <data id="231">
-                                                                <property name="resultSetColumn">name</property>
-                                                            </data>
-                                                        </cell>
-                                                    </row>
-                                                    <row id="232">
-                                                        <cell id="233">
-                                                            <label id="234">
-                                                                <property name="backgroundColor">#0080C0</property>
-                                                                <property name="color">#FFFFFF</property>
-                                                                <text-property name="text">ID</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="235">
-                                                            <data id="236">
-                                                                <property name="resultSetColumn">id</property>
-                                                            </data>
-                                                        </cell>
-                                                    </row>
-                                                    <row id="237">
-                                                        <cell id="238">
-                                                            <label id="239">
-                                                                <property name="backgroundColor">#0080C0</property>
-                                                                <property name="color">#FFFFFF</property>
-                                                                <text-property name="text">Fertigstellung</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="240">
-                                                            <data id="241">
-                                                                <property name="resultSetColumn">progress_subjective</property>
-                                                            </data>
-                                                        </cell>
-                                                    </row>
-                                                </grid>
-                                            </detail>
-                                        </list>
-                                    </cell>
-                                </row>
-                                <row id="242">
-                                    <property name="height">2.8854166666666665in</property>
-                                    <cell id="243">
+                                    <cell id="351">
                                         <list name="ToDo_Liste_Top5" id="246">
                                             <property name="dataSet">ToDo-Liste</property>
                                             <list-property name="paramBindings">
@@ -4321,7 +4362,254 @@
                                             </detail>
                                         </list>
                                     </cell>
-                                    <cell id="244">
+                                </row>
+                                <row id="199">
+                                    <property name="height">3.4375in</property>
+                                    <cell id="200">
+                                        <list id="132">
+                                            <property name="dataSet">Aktivitäten</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">id</property>
+                                                    <text-property name="displayName">_ID (tasks_id)</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">progress_subjective</property>
+                                                    <text-property name="displayName">Fertigstellung Ist</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
+                                                    <property name="dataType">float</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">task_data_date_to_as_date</property>
+                                                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
+                                                    <property name="dataType">date</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">project_id</property>
+                                                    <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">name</property>
+                                                    <text-property name="displayName">Name</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">date_to</property>
+                                                    <text-property name="displayName">Enddatum</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["date_to"]</expression>
+                                                    <property name="dataType">date</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">overdue</property>
+                                                    <text-property name="displayName">Überfällig?</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["overdue"]</expression>
+                                                    <property name="dataType">boolean</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">milestone</property>
+                                                    <text-property name="displayName">Meilenstein</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["milestone"]</expression>
+                                                    <property name="dataType">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <list-property name="filter">
+                                                <structure>
+                                                    <property name="operator">is-false</property>
+                                                    <expression name="expr" type="javascript">row["milestone"]</expression>
+                                                    <property name="updateAggregation">true</property>
+                                                </structure>
+                                            </list-property>
+                                            <header>
+                                                <text id="152">
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content"><![CDATA[Überfällige Aktivitäten]]></text-property>
+                                                </text>
+                                            </header>
+                                            <detail>
+                                                <grid id="134">
+                                                    <property name="width">7.510416666666667in</property>
+                                                    <column id="135">
+                                                        <property name="width">1.0416666666666667in</property>
+                                                    </column>
+                                                    <column id="136">
+                                                        <property name="width">6.46875in</property>
+                                                    </column>
+                                                    <row id="137">
+                                                        <cell id="138">
+                                                            <label id="139">
+                                                                <property name="backgroundColor">#0080C0</property>
+                                                                <property name="color">#FFFFFF</property>
+                                                                <text-property name="text">Name</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="140">
+                                                            <data id="141">
+                                                                <property name="resultSetColumn">name</property>
+                                                            </data>
+                                                        </cell>
+                                                    </row>
+                                                    <row id="142">
+                                                        <cell id="143">
+                                                            <label id="144">
+                                                                <property name="backgroundColor">#0080C0</property>
+                                                                <property name="color">#FFFFFF</property>
+                                                                <text-property name="text">ID</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="145">
+                                                            <data id="146">
+                                                                <property name="resultSetColumn">id</property>
+                                                            </data>
+                                                        </cell>
+                                                    </row>
+                                                    <row id="147">
+                                                        <cell id="148">
+                                                            <label id="149">
+                                                                <property name="backgroundColor">#0080C0</property>
+                                                                <property name="color">#FFFFFF</property>
+                                                                <text-property name="text">Fertigstellung</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="150">
+                                                            <data id="151">
+                                                                <property name="resultSetColumn">progress_subjective</property>
+                                                            </data>
+                                                        </cell>
+                                                    </row>
+                                                </grid>
+                                            </detail>
+                                        </list>
+                                    </cell>
+                                    <cell id="201">
+                                        <list id="222">
+                                            <property name="dataSet">Aktivitäten</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">id</property>
+                                                    <text-property name="displayName">_ID (tasks_id)</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">progress_subjective</property>
+                                                    <text-property name="displayName">Fertigstellung Ist</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
+                                                    <property name="dataType">float</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">task_data_date_to_as_date</property>
+                                                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
+                                                    <property name="dataType">date</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">project_id</property>
+                                                    <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">name</property>
+                                                    <text-property name="displayName">Name</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">date_to</property>
+                                                    <text-property name="displayName">Enddatum</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["date_to"]</expression>
+                                                    <property name="dataType">date</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">overdue</property>
+                                                    <text-property name="displayName">Überfällig?</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["overdue"]</expression>
+                                                    <property name="dataType">boolean</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">milestone</property>
+                                                    <text-property name="displayName">Meilenstein</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["milestone"]</expression>
+                                                    <property name="dataType">boolean</property>
+                                                </structure>
+                                            </list-property>
+                                            <list-property name="filter">
+                                                <structure>
+                                                    <property name="operator">is-true</property>
+                                                    <expression name="expr" type="javascript">row["milestone"]</expression>
+                                                    <property name="updateAggregation">true</property>
+                                                </structure>
+                                            </list-property>
+                                            <header>
+                                                <text id="223">
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content"><![CDATA[Überfällige Meilensteine]]></text-property>
+                                                </text>
+                                            </header>
+                                            <detail>
+                                                <grid id="224">
+                                                    <property name="height">0.9479166666666666in</property>
+                                                    <property name="width">7.510416666666667in</property>
+                                                    <column id="225">
+                                                        <property name="width">1.0416666666666667in</property>
+                                                    </column>
+                                                    <column id="226">
+                                                        <property name="width">6.46875in</property>
+                                                    </column>
+                                                    <row id="227">
+                                                        <cell id="228">
+                                                            <label id="229">
+                                                                <property name="backgroundColor">#0080C0</property>
+                                                                <property name="color">#FFFFFF</property>
+                                                                <text-property name="text">Name</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="230">
+                                                            <data id="231">
+                                                                <property name="resultSetColumn">name</property>
+                                                            </data>
+                                                        </cell>
+                                                    </row>
+                                                    <row id="232">
+                                                        <cell id="233">
+                                                            <label id="234">
+                                                                <property name="backgroundColor">#0080C0</property>
+                                                                <property name="color">#FFFFFF</property>
+                                                                <text-property name="text">ID</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="235">
+                                                            <data id="236">
+                                                                <property name="resultSetColumn">id</property>
+                                                            </data>
+                                                        </cell>
+                                                    </row>
+                                                    <row id="237">
+                                                        <property name="height">0.3958333333333333in</property>
+                                                        <cell id="238">
+                                                            <label id="239">
+                                                                <property name="backgroundColor">#0080C0</property>
+                                                                <property name="color">#FFFFFF</property>
+                                                                <text-property name="text">Fertigstellung</text-property>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="240">
+                                                            <data id="241">
+                                                                <property name="resultSetColumn">progress_subjective</property>
+                                                            </data>
+                                                        </cell>
+                                                    </row>
+                                                </grid>
+                                            </detail>
+                                        </list>
+                                    </cell>
+                                    <cell id="352">
                                         <list name="ToDo_Liste" id="247">
                                             <property name="dataSet">ToDo-Liste</property>
                                             <list-property name="paramBindings">
