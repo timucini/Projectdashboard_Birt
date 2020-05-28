@@ -4147,6 +4147,23 @@
                             <grid id="379">
                                 <property name="height">5.416666666666667in</property>
                                 <property name="width">11.09375in</property>
+                                <property name="dataSet">Aktivitäten</property>
+                                <list-property name="paramBindings">
+                                    <structure>
+                                        <property name="paramName">project_id</property>
+                                        <simple-property-list name="expression">
+                                            <value type="javascript">row["id"]</value>
+                                        </simple-property-list>
+                                    </structure>
+                                </list-property>
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">project_id</property>
+                                        <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
+                                        <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
                                 <column id="380">
                                     <property name="width">3.4895833333333335in</property>
                                 </column>
@@ -4177,13 +4194,13 @@
                                         <property name="borderTopColor">#0080FF</property>
                                         <property name="borderTopStyle">solid</property>
                                         <property name="borderTopWidth">thin</property>
-                                        <list name="Top5_MS_Liste" id="531">
+                                        <list id="563">
                                             <property name="dataSet">Aktivitäten</property>
                                             <list-property name="paramBindings">
                                                 <structure>
                                                     <property name="paramName">project_id</property>
                                                     <simple-property-list name="expression">
-                                                        <value type="javascript">row["id"]</value>
+                                                        <value type="javascript">row._outer["id"]</value>
                                                     </simple-property-list>
                                                 </structure>
                                             </list-property>
@@ -4255,175 +4272,9 @@
                                                     <property name="dataType">date</property>
                                                 </structure>
                                             </list-property>
-                                            <list-property name="filter">
-                                                <structure>
-                                                    <property name="operator">is-true</property>
-                                                    <expression name="expr" type="javascript">row["milestone"]</expression>
-                                                    <property name="updateAggregation">true</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="operator">is-false</property>
-                                                    <expression name="expr" type="javascript">row["is_finished"]</expression>
-                                                    <property name="updateAggregation">true</property>
-                                                </structure>
-                                            </list-property>
-                                            <header>
-                                                <grid id="533">
-                                                    <property name="height">0.4166666666666667in</property>
-                                                    <column id="534"/>
-                                                    <column id="535"/>
-                                                    <column id="536"/>
-                                                    <column id="537"/>
-                                                    <row id="538">
-                                                        <property name="height">0.4166666666666667in</property>
-                                                        <cell id="539">
-                                                            <property name="backgroundColor">#0080FF</property>
-                                                            <property name="borderRightStyle">solid</property>
-                                                            <property name="borderRightWidth">thin</property>
-                                                            <property name="paddingTop">0pt</property>
-                                                            <property name="paddingLeft">0pt</property>
-                                                            <property name="paddingBottom">0pt</property>
-                                                            <property name="paddingRight">0pt</property>
-                                                            <label id="543">
-                                                                <text-property name="text">Beginn</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="540">
-                                                            <property name="backgroundColor">#0080FF</property>
-                                                            <property name="borderRightStyle">solid</property>
-                                                            <property name="borderRightWidth">thin</property>
-                                                            <label id="544">
-                                                                <text-property name="text">Fälligkeit</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="541">
-                                                            <property name="backgroundColor">#0080FF</property>
-                                                            <property name="borderRightColor">#000000</property>
-                                                            <property name="borderRightStyle">solid</property>
-                                                            <property name="borderRightWidth">thin</property>
-                                                            <label id="545">
-                                                                <text-property name="text">Grad</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="542">
-                                                            <property name="backgroundColor">#0080FF</property>
-                                                            <label id="546">
-                                                                <text-property name="text">Name</text-property>
-                                                            </label>
-                                                        </cell>
-                                                    </row>
-                                                </grid>
-                                            </header>
                                             <detail>
-                                                <grid id="547">
-                                                    <property name="height">0.6354166666666666in</property>
-                                                    <property name="dataSet">Aktivitäten</property>
-                                                    <list-property name="paramBindings">
-                                                        <structure>
-                                                            <property name="paramName">id</property>
-                                                            <simple-property-list name="expression">
-                                                                <value type="javascript">row["id"]</value>
-                                                            </simple-property-list>
-                                                        </structure>
-                                                    </list-property>
-                                                    <list-property name="boundDataColumns">
-                                                        <structure>
-                                                            <property name="name">id</property>
-                                                            <text-property name="displayName">_ID (tasks_id)</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["id"]</expression>
-                                                            <property name="dataType">string</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">progress_subjective</property>
-                                                            <text-property name="displayName">Fertigstellung Ist</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
-                                                            <property name="dataType">float</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">task_data_date_to_as_date</property>
-                                                            <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
-                                                            <property name="dataType">date</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">project_id</property>
-                                                            <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
-                                                            <property name="dataType">string</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">name</property>
-                                                            <text-property name="displayName">Name</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["name"]</expression>
-                                                            <property name="dataType">string</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">date_to</property>
-                                                            <text-property name="displayName">Enddatum</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["date_to"]</expression>
-                                                            <property name="dataType">date</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">overdue</property>
-                                                            <text-property name="displayName">Überfällig?</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["overdue"]</expression>
-                                                            <property name="dataType">boolean</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">milestone</property>
-                                                            <text-property name="displayName">Meilenstein</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["milestone"]</expression>
-                                                            <property name="dataType">boolean</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">is_finished</property>
-                                                            <text-property name="displayName">Ist abgeschlossen</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["is_finished"]</expression>
-                                                            <property name="dataType">boolean</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">task_data_description</property>
-                                                            <text-property name="displayName">Beschreibung [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["task_data_description"]</expression>
-                                                            <property name="dataType">string</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">date_from</property>
-                                                            <text-property name="displayName">Startdatum</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["date_from"]</expression>
-                                                            <property name="dataType">date</property>
-                                                        </structure>
-                                                    </list-property>
-                                                    <column id="548"/>
-                                                    <column id="549"/>
-                                                    <column id="550"/>
-                                                    <column id="551"/>
-                                                    <row id="552">
-                                                        <property name="height">0.6354166666666666in</property>
-                                                        <cell id="553">
-                                                            <property name="borderRightStyle">solid</property>
-                                                            <property name="borderRightWidth">thin</property>
-                                                            <data id="557">
-                                                                <property name="resultSetColumn">id</property>
-                                                            </data>
-                                                        </cell>
-                                                        <cell id="554">
-                                                            <property name="borderRightStyle">solid</property>
-                                                            <property name="borderRightWidth">thin</property>
-                                                            <data id="558"/>
-                                                        </cell>
-                                                        <cell id="555">
-                                                            <property name="borderRightStyle">solid</property>
-                                                            <property name="borderRightWidth">thin</property>
-                                                            <data id="559"/>
-                                                        </cell>
-                                                        <cell id="556">
-                                                            <data id="560"/>
-                                                        </cell>
-                                                    </row>
-                                                </grid>
-                                                <data id="562">
-                                                    <property name="resultSetColumn">id</property>
+                                                <data id="564">
+                                                    <property name="resultSetColumn">name</property>
                                                 </data>
                                             </detail>
                                         </list>
