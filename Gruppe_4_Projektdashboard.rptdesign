@@ -140,6 +140,12 @@
                     <text-property name="displayName">Planungsart</text-property>
                     <text-property name="heading">Planungsart</text-property>
                 </structure>
+                <structure>
+                    <property name="columnName">indicator_sheet_progress</property>
+                    <property name="analysis">attribute</property>
+                    <text-property name="displayName">Ampel Bogen Fortschritt</text-property>
+                    <text-property name="heading">Ampel Bogen Fortschritt</text-property>
+                </structure>
             </list-property>
             <list-property name="parameters">
                 <structure>
@@ -733,11 +739,16 @@
                     </structure>
                     <structure>
                         <property name="position">20</property>
+                        <property name="name">indicator_sheet_progress</property>
+                        <property name="dataType">blob</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
                         <property name="name">project_name_and_number</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">21</property>
+                        <property name="position">22</property>
                         <property name="name">project_time</property>
                         <property name="dataType">string</property>
                     </structure>
@@ -878,8 +889,15 @@
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">indicator_sheet_progress</property>
+                    <property name="nativeName">indicator_sheet_progress</property>
+                    <property name="dataType">blob</property>
+                    <property name="nativeDataType">2004</property>
+                </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[{/projects}#:#{id#,#String#,#/@id#,##,#_ID (projects_id)};{type#,#String#,#/@type#,##,#Projektart};{manager_id#,#String#,##R#/manager/@id#,##,#_ID (staffs_id) [Projektleiter]};{state#,#String#,#/@state#,##,#Projektstatus};{internal#,#Boolean#,#/@internal#,##,#Projekttyp (intern/ extern)};{priority#,#String#,#/@priority#,##,#Priorität};{indicator_cockpit_costs#,#Blob#,#/@indicator_cockpit_costs#,##,#Ampel Cockpit Kosten};{indicator_cockpit_time#,#Blob#,#/@indicator_cockpit_time#,##,#Ampel Cockpit Zeit};{name#,#String#,#/@name#,##,#Name};{person_last_name#,#String#,##R#/manager/person/@last_name#,##,#Nachname [Projektleiter > Person]};{person_full_name#,#String#,##R#/manager/person/@full_name#,##,#Name [Projektleiter > Person]};{date_to#,#Date#,#/@date_to#,##,#Projektende};{date_from#,#Date#,#/@date_from#,##,#Projektstart};{hint_state_change#,#String#,#/@hint_state_change#,##,#Bemerkung letzer Statuswechsel};{data_interface_project_budget_actual#,#Double#,##R#/data_interface/@project_budget_actual#,##,#Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]};{data_interface_project_budget_plan#,#Double#,##R#/data_interface/@project_budget_plan#,##,#Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]};{data_interface_is_progress_objective#,#Double#,##R#/data_interface/@is_progress_objective#,##,#Fertigstellung (Ist, objektiv) [Projektdaten (Projektzeitraum)]};{data_interface_plan_progress#,#Double#,##R#/data_interface/@plan_progress#,##,#Fertigstellung (Plan) [Projektdaten (Projektzeitraum)]};{planning_type#,#String#,#/@planning_type#,##,#Planungsart}#:#]]></xml-property>
+            <xml-property name="queryText"><![CDATA[{/projects}#:#{id#,#String#,#/@id#,##,#_ID (projects_id)};{type#,#String#,#/@type#,##,#Projektart};{manager_id#,#String#,##R#/manager/@id#,##,#_ID (staffs_id) [Projektleiter]};{state#,#String#,#/@state#,##,#Projektstatus};{internal#,#Boolean#,#/@internal#,##,#Projekttyp (intern/ extern)};{priority#,#String#,#/@priority#,##,#Priorität};{indicator_cockpit_costs#,#Blob#,#/@indicator_cockpit_costs#,##,#Ampel Cockpit Kosten};{indicator_cockpit_time#,#Blob#,#/@indicator_cockpit_time#,##,#Ampel Cockpit Zeit};{name#,#String#,#/@name#,##,#Name};{person_last_name#,#String#,##R#/manager/person/@last_name#,##,#Nachname [Projektleiter > Person]};{person_full_name#,#String#,##R#/manager/person/@full_name#,##,#Name [Projektleiter > Person]};{date_to#,#Date#,#/@date_to#,##,#Projektende};{date_from#,#Date#,#/@date_from#,##,#Projektstart};{hint_state_change#,#String#,#/@hint_state_change#,##,#Bemerkung letzer Statuswechsel};{data_interface_project_budget_actual#,#Double#,##R#/data_interface/@project_budget_actual#,##,#Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]};{data_interface_project_budget_plan#,#Double#,##R#/data_interface/@project_budget_plan#,##,#Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]};{data_interface_is_progress_objective#,#Double#,##R#/data_interface/@is_progress_objective#,##,#Fertigstellung (Ist, objektiv) [Projektdaten (Projektzeitraum)]};{data_interface_plan_progress#,#Double#,##R#/data_interface/@plan_progress#,##,#Fertigstellung (Plan) [Projektdaten (Projektzeitraum)]};{planning_type#,#String#,#/@planning_type#,##,#Planungsart};{indicator_sheet_progress#,#Blob#,#/@indicator_sheet_progress#,##,#Ampel Bogen Fortschritt}#:#]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
