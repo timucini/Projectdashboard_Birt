@@ -4823,118 +4823,37 @@
                                                         </text>
                                                     </cell>
                                                     <cell id="443">
-                                                        <data id="916">
-                                                            <property name="dataSet">Projektdaten</property>
-                                                            <list-property name="boundDataColumns">
-                                                                <structure>
-                                                                    <property name="name">id</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">type</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["type"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">manager_id</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["manager_id"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">state</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["state"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">internal</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["internal"]</expression>
-                                                                    <property name="dataType">boolean</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">priority</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["priority"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">indicator_cockpit_costs</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["indicator_cockpit_costs"]</expression>
-                                                                    <property name="dataType">blob</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">indicator_cockpit_time</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["indicator_cockpit_time"]</expression>
-                                                                    <property name="dataType">blob</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">name</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">person_last_name</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["person_last_name"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">person_full_name</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["person_full_name"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">date_to</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["date_to"]</expression>
-                                                                    <property name="dataType">date</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">date_from</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["date_from"]</expression>
-                                                                    <property name="dataType">date</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">hint_state_change</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["hint_state_change"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">data_interface_project_budget_actual</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["data_interface_project_budget_actual"]</expression>
-                                                                    <property name="dataType">float</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">data_interface_project_budget_plan</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["data_interface_project_budget_plan"]</expression>
-                                                                    <property name="dataType">float</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">data_interface_is_progress_objective</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["data_interface_is_progress_objective"]</expression>
-                                                                    <property name="dataType">float</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">data_interface_plan_progress</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["data_interface_plan_progress"]</expression>
-                                                                    <property name="dataType">float</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">planning_type</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["planning_type"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">project_name_and_number</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["project_name_and_number"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                </structure>
-                                                                <structure>
-                                                                    <property name="name">project_time</property>
-                                                                    <expression name="expression" type="javascript">dataSetRow["project_time"]</expression>
-                                                                    <property name="dataType">string</property>
-                                                                    <property name="allowExport">true</property>
-                                                                </structure>
-                                                            </list-property>
-                                                            <property name="resultSetColumn">project_time</property>
-                                                        </data>
+                                                        <grid id="960">
+                                                            <property name="width">1.9479166666666667in</property>
+                                                            <column id="961">
+                                                                <property name="width">0.78125in</property>
+                                                            </column>
+                                                            <column id="962">
+                                                                <property name="width">0.15625in</property>
+                                                            </column>
+                                                            <column id="963">
+                                                                <property name="width">1.0104166666666667in</property>
+                                                            </column>
+                                                            <row id="964">
+                                                                <cell id="965">
+                                                                    <data id="968">
+                                                                        <property name="textAlign">left</property>
+                                                                        <property name="resultSetColumn">date_from</property>
+                                                                    </data>
+                                                                </cell>
+                                                                <cell id="966">
+                                                                    <text id="970">
+                                                                        <property name="contentType">auto</property>
+                                                                        <text-property name="content"><![CDATA[-]]></text-property>
+                                                                    </text>
+                                                                </cell>
+                                                                <cell id="967">
+                                                                    <data id="969">
+                                                                        <property name="resultSetColumn">date_to</property>
+                                                                    </data>
+                                                                </cell>
+                                                            </row>
+                                                        </grid>
                                                     </cell>
                                                 </row>
                                                 <row id="444">
