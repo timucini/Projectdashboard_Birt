@@ -2748,6 +2748,7 @@
 </model:DesignValues>]]></xml-property>
         </oda-data-set>
         <oda-data-set extensionID="net.proventis.report.birt.driver.dataSet" name="ToDos" id="245">
+            <property name="nullsOrdering">nulls lowest</property>
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">id</property>
@@ -2846,7 +2847,7 @@
                     <property name="nativeName">creator_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">1</property>
+                    <property name="position">6</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -2857,7 +2858,7 @@
                     <property name="nativeName">editor_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">2</property>
+                    <property name="position">4</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -2868,7 +2869,7 @@
                     <property name="nativeName">id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">3</property>
+                    <property name="position">1</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -2877,9 +2878,8 @@
                 <structure>
                     <property name="name">ignore_filtered_results</property>
                     <property name="nativeName">ignore_filtered_results</property>
-                    <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
-                    <property name="position">4</property>
+                    <property name="position">8</property>
                     <expression name="defaultValue" type="constant">false</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -2890,7 +2890,7 @@
                     <property name="nativeName">owner_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">5</property>
+                    <property name="position">2</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -2901,7 +2901,7 @@
                     <property name="nativeName">task_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">6</property>
+                    <property name="position">5</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -2923,7 +2923,7 @@
                     <property name="nativeName">virtual_head_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">8</property>
+                    <property name="position">3</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -3009,6 +3009,7 @@
                     </structure>
                 </list-property>
             </structure>
+            <property name="rowFetchLimit">0</property>
             <property name="dataSource">Data Source</property>
             <list-property name="resultSet">
                 <structure>
@@ -3127,7 +3128,7 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>creator_id</design:name>
+            <design:name>id</design:name>
             <design:position>1</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
@@ -3151,7 +3152,7 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>editor_id</design:name>
+            <design:name>owner_id</design:name>
             <design:position>2</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
@@ -3175,7 +3176,7 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>id</design:name>
+            <design:name>virtual_head_id</design:name>
             <design:position>3</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
@@ -3199,32 +3200,8 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>ignore_filtered_results</design:name>
+            <design:name>editor_id</design:name>
             <design:position>4</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>false</design:values>
-              <design:values>false</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>owner_id</design:name>
-            <design:position>5</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
@@ -3248,6 +3225,30 @@
         <design:attributes>
           <design:identifier>
             <design:name>task_id</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>creator_id</design:name>
             <design:position>6</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
@@ -3295,10 +3296,10 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>virtual_head_id</design:name>
+            <design:name>ignore_filtered_results</design:name>
             <design:position>8</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
@@ -3306,8 +3307,8 @@
         <design:inputAttributes>
           <design:elementAttributes>
             <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
+              <design:values>false</design:values>
+              <design:values>false</design:values>
             </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
@@ -4428,6 +4429,343 @@
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
         </oda-data-set>
+        <oda-data-set extensionID="net.proventis.report.birt.driver.dataSet" name="Auftraggeber" id="971">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_ID (department_customers_id)</text-property>
+                    <text-property name="heading">_ID (department_customers_id)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">project_id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
+                    <text-property name="heading">_ID (projects_id) [Projekt]</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">department_id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">_ID (departments_id) [Unternehmensbereich]</text-property>
+                    <text-property name="heading">_ID (departments_id) [Unternehmensbereich]</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">department_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Name [Unternehmensbereich]</text-property>
+                    <text-property name="heading">Name [Unternehmensbereich]</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">root_customers_only</property>
+                    <property name="nativeName">root_customers_only</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">16</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue" type="constant">false</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">project_id</property>
+                    <property name="nativeName">project_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">3</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">department_id</property>
+                    <property name="nativeName">department_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">4</property>
+                    <expression name="defaultValue" type="constant">__no_value__</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">ignore_filtered_results</property>
+                    <property name="nativeName">ignore_filtered_results</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">16</property>
+                    <property name="position">5</property>
+                    <expression name="defaultValue" type="constant">false</expression>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">project_id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">department_id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">department_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">project_id</property>
+                    <property name="nativeName">project_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">department_id</property>
+                    <property name="nativeName">department_id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">department_name</property>
+                    <property name="nativeName">department_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[{/department_customers}#:#{id#,#String#,#/@id#,##,#_ID (department_customers_id)};{project_id#,#String#,##R#/project/@id#,##,#_ID (projects_id) [Projekt]};{department_id#,#String#,##R#/department/@id#,##,#_ID (departments_id) [Unternehmensbereich]};{department_name#,#String#,##R#/department/@name#,##,#Name [Unternehmensbereich]}#:#]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>root_customers_only</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>false</design:values>
+              <design:values>false</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>id</design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>project_id</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>department_id</design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>ignore_filtered_results</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>false</design:values>
+              <design:values>false</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>_ID (department_customers_id)</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_ID (department_customers_id)</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>project_id</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>_ID (projects_id) [Projekt]</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_ID (projects_id) [Projekt]</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>department_id</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>_ID (departments_id) [Unternehmensbereich]</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>_ID (departments_id) [Unternehmensbereich]</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
     </data-sets>
     <styles>
         <style name="report" id="4">
@@ -4829,7 +5167,42 @@
                                                             <text-property name="content"><![CDATA[Auftraggeber: ]]></text-property>
                                                         </text>
                                                     </cell>
-                                                    <cell id="440"/>
+                                                    <cell id="440">
+                                                        <data id="972">
+                                                            <property name="dataSet">Auftraggeber</property>
+                                                            <list-property name="paramBindings">
+                                                                <structure>
+                                                                    <property name="paramName">project_id</property>
+                                                                    <simple-property-list name="expression">
+                                                                        <value type="javascript">row["id"]</value>
+                                                                    </simple-property-list>
+                                                                </structure>
+                                                            </list-property>
+                                                            <list-property name="boundDataColumns">
+                                                                <structure>
+                                                                    <property name="name">id</property>
+                                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                                                                    <property name="dataType">string</property>
+                                                                </structure>
+                                                                <structure>
+                                                                    <property name="name">project_id</property>
+                                                                    <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
+                                                                    <property name="dataType">string</property>
+                                                                </structure>
+                                                                <structure>
+                                                                    <property name="name">department_id</property>
+                                                                    <expression name="expression" type="javascript">dataSetRow["department_id"]</expression>
+                                                                    <property name="dataType">string</property>
+                                                                </structure>
+                                                                <structure>
+                                                                    <property name="name">department_name</property>
+                                                                    <expression name="expression" type="javascript">dataSetRow["department_name"]</expression>
+                                                                    <property name="dataType">string</property>
+                                                                </structure>
+                                                            </list-property>
+                                                            <property name="resultSetColumn">department_name</property>
+                                                        </data>
+                                                    </cell>
                                                 </row>
                                                 <row id="441">
                                                     <property name="height">0.23958333333333334in</property>
