@@ -5603,13 +5603,13 @@
                                             </header>
                                             <detail>
                                                 <grid id="594">
-                                                    <property name="height">0.3645833333333333in</property>
+                                                    <property name="height">0.375in</property>
                                                     <column id="595"/>
                                                     <column id="596"/>
                                                     <column id="597"/>
                                                     <column id="598"/>
                                                     <row id="599">
-                                                        <property name="height">0.3645833333333333in</property>
+                                                        <property name="height">0.375in</property>
                                                         <cell id="600">
                                                             <property name="borderBottomColor">#0080FF</property>
                                                             <property name="borderBottomStyle">solid</property>
@@ -5881,13 +5881,13 @@
                                             </header>
                                             <detail>
                                                 <grid id="746">
-                                                    <property name="height">0.3645833333333333in</property>
+                                                    <property name="height">0.375in</property>
                                                     <column id="747"/>
                                                     <column id="748"/>
                                                     <column id="749"/>
                                                     <column id="750"/>
                                                     <row id="751">
-                                                        <property name="height">0.3645833333333333in</property>
+                                                        <property name="height">0.375in</property>
                                                         <cell id="752">
                                                             <property name="borderBottomColor">#0080FF</property>
                                                             <property name="borderBottomStyle">solid</property>
@@ -6224,14 +6224,14 @@
                                                     </list-property>
                                                     <detail>
                                                         <grid id="791">
-                                                            <property name="height">0.3645833333333333in</property>
+                                                            <property name="height">0.375in</property>
                                                             <column id="792"/>
                                                             <column id="793"/>
                                                             <column id="794"/>
                                                             <column id="795"/>
                                                             <column id="796"/>
                                                             <row id="797">
-                                                                <property name="height">0.3645833333333333in</property>
+                                                                <property name="height">0.375in</property>
                                                                 <cell id="798">
                                                                     <property name="borderBottomColor">#0080FF</property>
                                                                     <property name="borderBottomStyle">solid</property>
@@ -6503,12 +6503,12 @@
                                             </header>
                                             <detail>
                                                 <grid id="717">
-                                                    <property name="height">0.3645833333333333in</property>
+                                                    <property name="height">0.375in</property>
                                                     <column id="719"/>
                                                     <column id="720"/>
                                                     <column id="721"/>
                                                     <row id="722">
-                                                        <property name="height">0.3645833333333333in</property>
+                                                        <property name="height">0.375in</property>
                                                         <cell id="725">
                                                             <property name="borderBottomColor">#0080FF</property>
                                                             <property name="borderBottomStyle">solid</property>
@@ -6742,12 +6742,12 @@
                                             </header>
                                             <detail>
                                                 <grid id="775">
-                                                    <property name="height">0.3645833333333333in</property>
+                                                    <property name="height">0.375in</property>
                                                     <column id="777"/>
                                                     <column id="778"/>
                                                     <column id="779"/>
                                                     <row id="780">
-                                                        <property name="height">0.3645833333333333in</property>
+                                                        <property name="height">0.375in</property>
                                                         <cell id="783">
                                                             <property name="borderBottomColor">#0080FF</property>
                                                             <property name="borderBottomStyle">solid</property>
@@ -7055,14 +7055,14 @@
                                                     </list-property>
                                                     <detail>
                                                         <grid id="870">
-                                                            <property name="height">0.3645833333333333in</property>
+                                                            <property name="height">0.375in</property>
                                                             <column id="871"/>
                                                             <column id="872"/>
                                                             <column id="873"/>
                                                             <column id="874"/>
                                                             <column id="875"/>
                                                             <row id="876">
-                                                                <property name="height">0.3645833333333333in</property>
+                                                                <property name="height">0.375in</property>
                                                                 <cell id="877">
                                                                     <property name="borderBottomColor">#0080FF</property>
                                                                     <property name="borderBottomStyle">solid</property>
