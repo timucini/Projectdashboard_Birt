@@ -5318,6 +5318,11 @@
                                                     </cell>
                                                     <cell id="446">
                                                         <data id="472">
+                                                            <structure name="numberFormat">
+                                                                <property name="category">Currency</property>
+                                                                <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                                                                <property name="locale">de</property>
+                                                            </structure>
                                                             <property name="resultSetColumn">data_interface_project_budget_plan</property>
                                                         </data>
                                                     </cell>
@@ -5333,6 +5338,10 @@
                                                     </cell>
                                                     <cell id="470">
                                                         <data id="473">
+                                                            <structure name="numberFormat">
+                                                                <property name="category">Currency</property>
+                                                                <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                                                            </structure>
                                                             <property name="resultSetColumn">data_interface_project_budget_actual</property>
                                                         </data>
                                                     </cell>
@@ -5712,6 +5721,10 @@
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="700">
                                                                 <property name="fontSize">9pt</property>
+                                                                <structure name="numberFormat">
+                                                                    <property name="category">Fixed</property>
+                                                                    <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                                                                </structure>
                                                                 <property name="resultSetColumn">progress_subjective</property>
                                                             </data>
                                                         </cell>
@@ -5990,6 +6003,10 @@
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="757">
                                                                 <property name="fontSize">9pt</property>
+                                                                <structure name="numberFormat">
+                                                                    <property name="category">Fixed</property>
+                                                                    <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                                                                </structure>
                                                                 <property name="resultSetColumn">progress_subjective</property>
                                                             </data>
                                                         </cell>
@@ -6597,6 +6614,10 @@
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="728">
                                                                 <property name="fontSize">9pt</property>
+                                                                <structure name="numberFormat">
+                                                                    <property name="category">Fixed</property>
+                                                                    <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                                                                </structure>
                                                                 <property name="resultSetColumn">progress_subjective</property>
                                                             </data>
                                                         </cell>
@@ -6836,6 +6857,10 @@
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="786">
                                                                 <property name="fontSize">9pt</property>
+                                                                <structure name="numberFormat">
+                                                                    <property name="category">Fixed</property>
+                                                                    <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                                                                </structure>
                                                                 <property name="resultSetColumn">progress_subjective</property>
                                                             </data>
                                                         </cell>
