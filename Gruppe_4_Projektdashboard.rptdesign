@@ -5558,12 +5558,6 @@
                                                     <expression name="expression" type="javascript">dataSetRow["date_from"]</expression>
                                                     <property name="dataType">date</property>
                                                 </structure>
-                                                <structure>
-                                                    <property name="name">Column Binding</property>
-                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
-                                                    <property name="dataType">string</property>
-                                                    <property name="allowExport">true</property>
-                                                </structure>
                                             </list-property>
                                             <list-property name="sort">
                                                 <structure>
@@ -5839,12 +5833,6 @@
                                                     <text-property name="displayName">Startdatum</text-property>
                                                     <expression name="expression" type="javascript">dataSetRow["date_from"]</expression>
                                                     <property name="dataType">date</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">Column Binding</property>
-                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
-                                                    <property name="dataType">string</property>
-                                                    <property name="allowExport">true</property>
                                                 </structure>
                                             </list-property>
                                             <list-property name="sort">
@@ -6490,12 +6478,6 @@
                                                     <expression name="expression" type="javascript">dataSetRow["date_from"]</expression>
                                                     <property name="dataType">date</property>
                                                 </structure>
-                                                <structure>
-                                                    <property name="name">Column Binding</property>
-                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
-                                                    <property name="dataType">string</property>
-                                                    <property name="allowExport">true</property>
-                                                </structure>
                                             </list-property>
                                             <list-property name="sort">
                                                 <structure>
@@ -6732,12 +6714,6 @@
                                                     <text-property name="displayName">Startdatum</text-property>
                                                     <expression name="expression" type="javascript">dataSetRow["date_from"]</expression>
                                                     <property name="dataType">date</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">Column Binding</property>
-                                                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
-                                                    <property name="dataType">string</property>
-                                                    <property name="allowExport">true</property>
                                                 </structure>
                                             </list-property>
                                             <list-property name="sort">
