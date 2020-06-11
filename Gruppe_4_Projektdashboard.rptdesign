@@ -4999,16 +4999,16 @@
                                     <property name="height">0.46875in</property>
                                     <property name="width">18.541666666666668in</property>
                                     <column id="918">
-                                        <property name="width">7.333333333333333in</property>
+                                        <property name="width">7.375in</property>
                                     </column>
                                     <column id="983">
-                                        <property name="width">0.23958333333333334in</property>
+                                        <property name="width">0.11458333333333333in</property>
                                     </column>
                                     <column id="919">
-                                        <property name="width">2.09375in</property>
+                                        <property name="width">2.1458333333333335in</property>
                                     </column>
                                     <column id="978">
-                                        <property name="width">8.875in</property>
+                                        <property name="width">8.90625in</property>
                                     </column>
                                     <row id="973">
                                         <property name="height">0.13541666666666666in</property>
@@ -5098,21 +5098,21 @@
                                 </grid>
                                 <grid name="Grid_List_Title" id="366">
                                     <property name="height">1.3020833333333333in</property>
-                                    <property name="width">11.145833333333334in</property>
+                                    <property name="width">11.125in</property>
                                     <column id="367">
-                                        <property name="width">3.59375in</property>
+                                        <property name="width">3.625in</property>
                                     </column>
                                     <column id="400">
-                                        <property name="width">0.15625in</property>
+                                        <property name="width">0.125in</property>
                                     </column>
                                     <column id="368">
-                                        <property name="width">3.59375in</property>
+                                        <property name="width">3.625in</property>
                                     </column>
                                     <column id="402">
-                                        <property name="width">0.2604166666666667in</property>
+                                        <property name="width">0.15625in</property>
                                     </column>
                                     <column id="404">
-                                        <property name="width">3.5416666666666665in</property>
+                                        <property name="width">3.59375in</property>
                                     </column>
                                     <row id="369">
                                         <property name="height">1.0625in</property>
@@ -5127,12 +5127,12 @@
                                             <property name="paddingRight">1pt</property>
                                             <grid name="Grid_List_Title_Left" id="423">
                                                 <property name="height">0.71875in</property>
-                                                <property name="width">3.5208333333333335in</property>
+                                                <property name="width">3.5833333333333335in</property>
                                                 <column id="424">
                                                     <property name="width">0.9895833333333334in</property>
                                                 </column>
                                                 <column id="425">
-                                                    <property name="width">2.53125in</property>
+                                                    <property name="width">2.59375in</property>
                                                 </column>
                                                 <row id="426">
                                                     <property name="height">0.23958333333333334in</property>
@@ -5202,12 +5202,12 @@
                                             <property name="borderTopWidth">thin</property>
                                             <grid name="Grid-List-Title-Right" id="435">
                                                 <property name="height">0.9583333333333334in</property>
-                                                <property name="width">3.5625in</property>
+                                                <property name="width">3.59375in</property>
                                                 <column id="436">
                                                     <property name="width">1.4895833333333333in</property>
                                                 </column>
                                                 <column id="437">
-                                                    <property name="width">2.0729166666666665in</property>
+                                                    <property name="width">2.1041666666666665in</property>
                                                 </column>
                                                 <row id="438">
                                                     <property name="height">0.23958333333333334in</property>
@@ -5266,7 +5266,7 @@
                                                     </cell>
                                                     <cell id="443">
                                                         <grid id="960">
-                                                            <property name="width">1.9479166666666667in</property>
+                                                            <property name="width">2.0208333333333335in</property>
                                                             <column id="961">
                                                                 <property name="width">0.78125in</property>
                                                             </column>
@@ -5274,7 +5274,7 @@
                                                                 <property name="width">0.15625in</property>
                                                             </column>
                                                             <column id="963">
-                                                                <property name="width">1.0104166666666667in</property>
+                                                                <property name="width">1.0833333333333333in</property>
                                                             </column>
                                                             <row id="964">
                                                                 <cell id="965">
@@ -5438,7 +5438,7 @@
                         <detail>
                             <grid id="379">
                                 <property name="height">5.645833333333333in</property>
-                                <property name="width">11.145833333333334in</property>
+                                <property name="width">11.1875in</property>
                                 <property name="dataSet">Aktivitäten</property>
                                 <list-property name="paramBindings">
                                     <structure>
@@ -5457,19 +5457,19 @@
                                     </structure>
                                 </list-property>
                                 <column id="380">
-                                    <property name="width">3.5416666666666665in</property>
+                                    <property name="width">3.625in</property>
                                 </column>
                                 <column id="381">
-                                    <property name="width">0.2604166666666667in</property>
+                                    <property name="width">0.15625in</property>
                                 </column>
                                 <column id="382">
-                                    <property name="width">3.5416666666666665in</property>
+                                    <property name="width">3.625in</property>
                                 </column>
                                 <column id="407">
-                                    <property name="width">0.2604166666666667in</property>
+                                    <property name="width">0.15625in</property>
                                 </column>
                                 <column id="410">
-                                    <property name="width">3.5416666666666665in</property>
+                                    <property name="width">3.625in</property>
                                 </column>
                                 <row id="383">
                                     <property name="height">2.71875in</property>
@@ -5586,10 +5586,19 @@
                                             <header>
                                                 <grid id="609">
                                                     <property name="height">0.5208333333333334in</property>
-                                                    <column id="610"/>
-                                                    <column id="611"/>
-                                                    <column id="612"/>
-                                                    <column id="613"/>
+                                                    <property name="width">3.5833333333333335in</property>
+                                                    <column id="610">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="611">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="612">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="613">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
                                                     <row id="614">
                                                         <property name="height">0.5208333333333334in</property>
                                                         <cell id="615">
@@ -5605,6 +5614,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="619">
@@ -5623,6 +5636,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="620">
@@ -5642,6 +5659,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="621">
@@ -5662,6 +5683,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="622">
@@ -5674,10 +5699,19 @@
                                             <detail>
                                                 <grid id="594">
                                                     <property name="height">0.375in</property>
-                                                    <column id="595"/>
-                                                    <column id="596"/>
-                                                    <column id="597"/>
-                                                    <column id="598"/>
+                                                    <property name="width">3.5833333333333335in</property>
+                                                    <column id="595">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="596">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="597">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="598">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
                                                     <row id="599">
                                                         <property name="height">0.375in</property>
                                                         <cell id="600">
@@ -5690,6 +5724,10 @@
                                                             <property name="borderRightColor">#000000</property>
                                                             <property name="borderRightStyle">solid</property>
                                                             <property name="borderRightWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="698">
@@ -5704,6 +5742,10 @@
                                                             <property name="borderRightColor">#000000</property>
                                                             <property name="borderRightStyle">solid</property>
                                                             <property name="borderRightWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="699">
@@ -5722,6 +5764,10 @@
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="700">
                                                                 <property name="fontSize">9pt</property>
+                                                                <property name="paddingTop">0pt</property>
+                                                                <property name="paddingLeft">0pt</property>
+                                                                <property name="paddingBottom">0pt</property>
+                                                                <property name="paddingRight">0pt</property>
                                                                 <structure name="numberFormat">
                                                                     <property name="category">Fixed</property>
                                                                     <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
@@ -5736,6 +5782,10 @@
                                                             <property name="borderRightColor">#0082C8</property>
                                                             <property name="borderRightStyle">solid</property>
                                                             <property name="borderRightWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="701">
@@ -5861,13 +5911,22 @@
                                             </list-property>
                                             <header>
                                                 <grid id="732">
-                                                    <property name="height">0.5208333333333334in</property>
-                                                    <column id="733"/>
-                                                    <column id="734"/>
-                                                    <column id="735"/>
-                                                    <column id="736"/>
+                                                    <property name="height">0.53125in</property>
+                                                    <property name="width">3.5833333333333335in</property>
+                                                    <column id="733">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="734">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="735">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="736">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
                                                     <row id="737">
-                                                        <property name="height">0.5208333333333334in</property>
+                                                        <property name="height">0.53125in</property>
                                                         <cell id="738">
                                                             <property name="backgroundColor">#0082C8</property>
                                                             <property name="borderBottomColor">#0082C8</property>
@@ -5949,13 +6008,22 @@
                                             </header>
                                             <detail>
                                                 <grid id="746">
-                                                    <property name="height">0.375in</property>
-                                                    <column id="747"/>
-                                                    <column id="748"/>
-                                                    <column id="749"/>
-                                                    <column id="750"/>
+                                                    <property name="height">0.3854166666666667in</property>
+                                                    <property name="width">3.5833333333333335in</property>
+                                                    <column id="747">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="748">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="749">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
+                                                    <column id="750">
+                                                        <property name="width">0.8958333333333334in</property>
+                                                    </column>
                                                     <row id="751">
-                                                        <property name="height">0.375in</property>
+                                                        <property name="height">0.3854166666666667in</property>
                                                         <cell id="752">
                                                             <property name="borderBottomColor">#0082C8</property>
                                                             <property name="borderBottomStyle">solid</property>
@@ -6059,14 +6127,25 @@
                                             </list-property>
                                             <header>
                                                 <grid id="827">
-                                                    <property name="height">0.5208333333333334in</property>
-                                                    <column id="828"/>
-                                                    <column id="829"/>
-                                                    <column id="830"/>
-                                                    <column id="831"/>
-                                                    <column id="832"/>
+                                                    <property name="height">0.5416666666666666in</property>
+                                                    <property name="width">3.5416666666666665in</property>
+                                                    <column id="828">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
+                                                    <column id="829">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
+                                                    <column id="830">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
+                                                    <column id="831">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
+                                                    <column id="832">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
                                                     <row id="833">
-                                                        <property name="height">0.5208333333333334in</property>
+                                                        <property name="height">0.5416666666666666in</property>
                                                         <cell id="834">
                                                             <property name="backgroundColor">#0082C8</property>
                                                             <property name="borderBottomColor">#0082C8</property>
@@ -6081,6 +6160,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="835">
@@ -6100,6 +6183,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="837">
@@ -6119,6 +6206,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="839">
@@ -6137,6 +6228,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="841">
@@ -6156,6 +6251,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="843">
@@ -6297,11 +6396,22 @@
                                                     <detail>
                                                         <grid id="791">
                                                             <property name="height">0.375in</property>
-                                                            <column id="792"/>
-                                                            <column id="793"/>
-                                                            <column id="794"/>
-                                                            <column id="795"/>
-                                                            <column id="796"/>
+                                                            <property name="width">3.5416666666666665in</property>
+                                                            <column id="792">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
+                                                            <column id="793">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
+                                                            <column id="794">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
+                                                            <column id="795">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
+                                                            <column id="796">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
                                                             <row id="797">
                                                                 <property name="height">0.375in</property>
                                                                 <cell id="798">
@@ -6313,6 +6423,10 @@
                                                                     <property name="borderLeftWidth">thin</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="803">
@@ -6327,6 +6441,10 @@
                                                                     <property name="borderRightColor">#000000</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="804">
@@ -6341,6 +6459,10 @@
                                                                     <property name="borderRightColor">#000000</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="805">
@@ -6355,6 +6477,10 @@
                                                                     <property name="borderRightColor">#000000</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="806">
@@ -6369,6 +6495,10 @@
                                                                     <property name="borderRightColor">#0082C8</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="807">
@@ -6501,9 +6631,16 @@
                                             <header>
                                                 <grid id="703">
                                                     <property name="height">0.5208333333333334in</property>
-                                                    <column id="705"/>
-                                                    <column id="706"/>
-                                                    <column id="707"/>
+                                                    <property name="width">3.59375in</property>
+                                                    <column id="705">
+                                                        <property name="width">1.1979166666666667in</property>
+                                                    </column>
+                                                    <column id="706">
+                                                        <property name="width">1.1979166666666667in</property>
+                                                    </column>
+                                                    <column id="707">
+                                                        <property name="width">1.1979166666666667in</property>
+                                                    </column>
                                                     <row id="708">
                                                         <property name="height">0.5208333333333334in</property>
                                                         <cell id="711">
@@ -6519,6 +6656,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="712">
@@ -6538,6 +6679,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="714">
@@ -6558,6 +6703,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="716">
@@ -6585,6 +6734,10 @@
                                                             <property name="borderRightColor">#000000</property>
                                                             <property name="borderRightStyle">solid</property>
                                                             <property name="borderRightWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="726">
@@ -6599,6 +6752,10 @@
                                                             <property name="borderRightColor">#000000</property>
                                                             <property name="borderRightStyle">solid</property>
                                                             <property name="borderRightWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="728">
@@ -6617,6 +6774,10 @@
                                                             <property name="borderRightColor">#0082C8</property>
                                                             <property name="borderRightStyle">solid</property>
                                                             <property name="borderRightWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="730">
@@ -6738,9 +6899,16 @@
                                             <header>
                                                 <grid id="761">
                                                     <property name="height">0.5208333333333334in</property>
-                                                    <column id="763"/>
-                                                    <column id="764"/>
-                                                    <column id="765"/>
+                                                    <property name="width">3.59375in</property>
+                                                    <column id="763">
+                                                        <property name="width">1.1979166666666667in</property>
+                                                    </column>
+                                                    <column id="764">
+                                                        <property name="width">1.1979166666666667in</property>
+                                                    </column>
+                                                    <column id="765">
+                                                        <property name="width">1.1979166666666667in</property>
+                                                    </column>
                                                     <row id="766">
                                                         <property name="height">0.5208333333333334in</property>
                                                         <cell id="769">
@@ -6756,6 +6924,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="770">
@@ -6775,6 +6947,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="772">
@@ -6795,6 +6971,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="774">
@@ -6822,6 +7002,10 @@
                                                             <property name="borderRightColor">#000000</property>
                                                             <property name="borderRightStyle">solid</property>
                                                             <property name="borderRightWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="784">
@@ -6836,6 +7020,10 @@
                                                             <property name="borderRightColor">#000000</property>
                                                             <property name="borderRightStyle">solid</property>
                                                             <property name="borderRightWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="786">
@@ -6854,6 +7042,10 @@
                                                             <property name="borderRightColor">#0082C8</property>
                                                             <property name="borderRightStyle">solid</property>
                                                             <property name="borderRightWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <data id="788">
@@ -6902,11 +7094,22 @@
                                             <header>
                                                 <grid id="852">
                                                     <property name="height">0.5208333333333334in</property>
-                                                    <column id="853"/>
-                                                    <column id="854"/>
-                                                    <column id="855"/>
-                                                    <column id="856"/>
-                                                    <column id="857"/>
+                                                    <property name="width">3.5416666666666665in</property>
+                                                    <column id="853">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
+                                                    <column id="854">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
+                                                    <column id="855">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
+                                                    <column id="856">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
+                                                    <column id="857">
+                                                        <property name="width">0.7083333333333334in</property>
+                                                    </column>
                                                     <row id="858">
                                                         <property name="height">0.5208333333333334in</property>
                                                         <cell id="859">
@@ -6923,6 +7126,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="860">
@@ -6942,6 +7149,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="862">
@@ -6961,6 +7172,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="864">
@@ -6979,6 +7194,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="866">
@@ -6998,6 +7217,10 @@
                                                             <property name="borderTopColor">#0082C8</property>
                                                             <property name="borderTopStyle">solid</property>
                                                             <property name="borderTopWidth">thin</property>
+                                                            <property name="paddingTop">0pt</property>
+                                                            <property name="paddingLeft">0pt</property>
+                                                            <property name="paddingBottom">0pt</property>
+                                                            <property name="paddingRight">0pt</property>
                                                             <property name="textAlign">center</property>
                                                             <property name="verticalAlign">middle</property>
                                                             <label id="868">
@@ -7124,11 +7347,22 @@
                                                     <detail>
                                                         <grid id="870">
                                                             <property name="height">0.375in</property>
-                                                            <column id="871"/>
-                                                            <column id="872"/>
-                                                            <column id="873"/>
-                                                            <column id="874"/>
-                                                            <column id="875"/>
+                                                            <property name="width">3.5416666666666665in</property>
+                                                            <column id="871">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
+                                                            <column id="872">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
+                                                            <column id="873">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
+                                                            <column id="874">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
+                                                            <column id="875">
+                                                                <property name="width">0.7083333333333334in</property>
+                                                            </column>
                                                             <row id="876">
                                                                 <property name="height">0.375in</property>
                                                                 <cell id="877">
@@ -7140,6 +7374,10 @@
                                                                     <property name="borderLeftWidth">thin</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="878">
@@ -7154,6 +7392,10 @@
                                                                     <property name="borderRightColor">#000000</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="880">
@@ -7168,6 +7410,10 @@
                                                                     <property name="borderRightColor">#000000</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="882">
@@ -7182,6 +7428,10 @@
                                                                     <property name="borderRightColor">#000000</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="884">
@@ -7196,6 +7446,10 @@
                                                                     <property name="borderRightColor">#0082C8</property>
                                                                     <property name="borderRightStyle">solid</property>
                                                                     <property name="borderRightWidth">thin</property>
+                                                                    <property name="paddingTop">0pt</property>
+                                                                    <property name="paddingLeft">0pt</property>
+                                                                    <property name="paddingBottom">0pt</property>
+                                                                    <property name="paddingRight">0pt</property>
                                                                     <property name="textAlign">center</property>
                                                                     <property name="verticalAlign">middle</property>
                                                                     <data id="886">
