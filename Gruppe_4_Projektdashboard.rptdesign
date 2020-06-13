@@ -5512,9 +5512,9 @@
       </Bounds>
       <Insets>
         <Top>3.0</Top>
-        <Left>3.0</Left>
+        <Left>4.0</Left>
         <Bottom>3.0</Bottom>
-        <Right>3.0</Right>
+        <Right>1.0</Right>
       </Insets>
       <Row>-1</Row>
       <Column>-1</Column>
@@ -5639,6 +5639,51 @@
     <Visible>true</Visible>
   </Block>
   <Dimension>Two_Dimensional</Dimension>
+  <Script>importPackage( Packages.java.util);&#xD;
+importPackage(Packages.java.lang);&#xD;
+importPackage( Packages.org.eclipse.birt.chart.model.type.impl);&#xD;
+importPackage( Packages.org.eclipse.birt.chart.model.data.impl);&#xD;
+&#xD;
+function afterDataSetFilled( series, dataSet, icsc ) {&#xD;
+	if(series.getClass() == PieSeriesImpl){&#xD;
+		list = dataSet.getValues();&#xD;
+		myarray = new ArrayList();&#xD;
+		newVal = 100 - list[0];&#xD;
+		val = list[0];&#xD;
+		double_newVal = new Double(newVal);&#xD;
+		double_val = new Double(val);&#xD;
+		round_newVal = Math.round(double_newVal, 2);&#xD;
+		round_val = Math.round(double_val, 2)&#xD;
+		myarray.add(round_newVal);&#xD;
+		myarray.add(round_val);&#xD;
+		dataSet.setValues(myarray);&#xD;
+	} else {&#xD;
+		var catArray = new ArrayList();&#xD;
+		catArray.add(&quot;Ist&quot;);&#xD;
+		catArray.add(&quot;Plan&quot;);&#xD;
+		dataSet.setValues(catArray);&#xD;
+	}&#xD;
+}&#xD;
+function beforeDrawDataPoint( dph, fill, icsc )&#xD;
+{&#xD;
+	if(dph.getSeriesValue() == &quot;Is&quot;){&#xD;
+		fill.set(0,128,0);&#xD;
+		if(dph.getBaseDisplayValue() == &quot;Ist&quot;){&#xD;
+		fill.set(217, 217, 217);&#xD;
+		}&#xD;
+	}&#xD;
+	if(dph.getSeriesValue() == &quot;Plan&quot;){&#xD;
+		fill.set(242,88,106);&#xD;
+		if(dph.getBaseDisplayValue() == &quot;Ist&quot;){&#xD;
+		fill.set(217, 217, 217);&#xD;
+		}&#xD;
+	}&#xD;
+}&#xD;
+function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
+	if(dph.getBaseDisplayValue() == &quot;Ist&quot;){&#xD;
+		label.setVisible(false);&#xD;
+	}&#xD;
+}</Script>
   <Units>Points</Units>
   <SeriesThickness>10.0</SeriesThickness>
   <GridColumnCount>0</GridColumnCount>
@@ -5654,8 +5699,14 @@
       <DataSetRepresentation>6,4,12,8,10</DataSetRepresentation>
       <SeriesDefinitionIndex>0</SeriesDefinitionIndex>
     </OrthogonalSampleData>
+    <OrthogonalSampleData>
+      <DataSetRepresentation>12.0,8.0,24.0,16.0,20.0</DataSetRepresentation>
+      <SeriesDefinitionIndex>1</SeriesDefinitionIndex>
+    </OrthogonalSampleData>
   </SampleData>
-  <Interactivity/>
+  <Interactivity>
+    <LegendBehavior>None</LegendBehavior>
+  </Interactivity>
   <EmptyMessage>
     <Caption>
       <Value>This chart contains no data.</Value>
@@ -5696,9 +5747,9 @@
     <SeriesPalette>
       <Entries xsi:type="attribute:ColorDefinition">
         <Transparency>255</Transparency>
-        <Red>80</Red>
-        <Green>166</Green>
-        <Blue>218</Blue>
+        <Red>0</Red>
+        <Green>128</Green>
+        <Blue>0</Blue>
       </Entries>
       <Entries xsi:type="attribute:ColorDefinition">
         <Transparency>255</Transparency>
@@ -5888,9 +5939,9 @@
       <SeriesPalette>
         <Entries xsi:type="attribute:ColorDefinition">
           <Transparency>255</Transparency>
-          <Red>80</Red>
-          <Green>166</Green>
-          <Blue>218</Blue>
+          <Red>0</Red>
+          <Green>128</Green>
+          <Blue>0</Blue>
         </Entries>
         <Entries xsi:type="attribute:ColorDefinition">
           <Transparency>255</Transparency>
@@ -6105,23 +6156,323 @@
             <Bottom>0.0</Bottom>
             <Right>3.0</Right>
           </Insets>
-          <Visible>false</Visible>
+          <Visible>true</Visible>
         </Label>
         <DataDefinition>
-          <Definition>1 - row[&quot;data_interface_is_progress_objective&quot;]</Definition>
+          <Definition>row[&quot;data_interface_is_progress_objective&quot;]</Definition>
           <Grouping>
             <GroupType>Text</GroupType>
             <AggregateExpression>Sum</AggregateExpression>
           </Grouping>
         </DataDefinition>
-        <SeriesIdentifier>Series 1</SeriesIdentifier>
+        <SeriesIdentifier>Is</SeriesIdentifier>
         <DataPoint>
           <Components>
             <Type>Orthogonal_Value</Type>
           </Components>
           <Separator>, </Separator>
         </DataPoint>
-        <LabelPosition>Outside</LabelPosition>
+        <LabelPosition>Inside</LabelPosition>
+        <Stacked>false</Stacked>
+        <Triggers>
+          <Condition>onmouseover</Condition>
+          <Action>
+            <Type>Show_Tooltip</Type>
+            <Value xsi:type="attribute:TooltipValue">
+              <Text></Text>
+              <Delay>200</Delay>
+            </Value>
+          </Action>
+        </Triggers>
+        <Explosion>0</Explosion>
+        <Title>
+          <Caption>
+            <Value></Value>
+            <Font>
+              <Size>16.0</Size>
+              <Bold>true</Bold>
+              <Alignment/>
+            </Font>
+          </Caption>
+          <Background xsi:type="attribute:ColorDefinition">
+            <Transparency>0</Transparency>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
+          </Background>
+          <Outline>
+            <Style>Solid</Style>
+            <Thickness>1</Thickness>
+            <Color>
+              <Transparency>255</Transparency>
+              <Red>0</Red>
+              <Green>0</Green>
+              <Blue>0</Blue>
+            </Color>
+          </Outline>
+          <Insets>
+            <Top>0.0</Top>
+            <Left>2.0</Left>
+            <Bottom>0.0</Bottom>
+            <Right>3.0</Right>
+          </Insets>
+          <Visible>false</Visible>
+        </Title>
+        <TitlePosition>Below</TitlePosition>
+        <LeaderLineAttributes>
+          <Style>Solid</Style>
+          <Thickness>1</Thickness>
+          <Visible>true</Visible>
+        </LeaderLineAttributes>
+        <LeaderLineLength>10.0</LeaderLineLength>
+      </Series>
+      <Grouping>
+        <GroupType>Text</GroupType>
+        <AggregateExpression>Sum</AggregateExpression>
+      </Grouping>
+    </SeriesDefinitions>
+    <SeriesDefinitions>
+      <Query>
+        <Definition></Definition>
+      </Query>
+      <SeriesPalette>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>242</Red>
+          <Green>88</Green>
+          <Blue>106</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>232</Red>
+          <Green>172</Green>
+          <Blue>57</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>255</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>64</Red>
+          <Green>128</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>192</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>170</Red>
+          <Green>85</Green>
+          <Blue>85</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>0</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>192</Red>
+          <Green>192</Green>
+          <Blue>192</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>192</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>7</Red>
+          <Green>146</Green>
+          <Blue>94</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>128</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>192</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>128</Green>
+          <Blue>192</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>0</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>64</Green>
+          <Blue>64</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>64</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>80</Red>
+          <Green>240</Green>
+          <Blue>120</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>64</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>0</Green>
+          <Blue>64</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>0</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>64</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>64</Green>
+          <Blue>0</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>0</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>128</Green>
+          <Blue>0</Blue>
+        </Entries>
+      </SeriesPalette>
+      <Series xsi:type="type:PieSeries">
+        <Visible>true</Visible>
+        <Label>
+          <Caption>
+            <Value></Value>
+            <Font>
+              <Alignment/>
+            </Font>
+          </Caption>
+          <Background xsi:type="attribute:ColorDefinition">
+            <Transparency>0</Transparency>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
+          </Background>
+          <Outline>
+            <Style>Solid</Style>
+            <Thickness>1</Thickness>
+            <Color>
+              <Transparency>255</Transparency>
+              <Red>0</Red>
+              <Green>0</Green>
+              <Blue>0</Blue>
+            </Color>
+            <Visible>false</Visible>
+          </Outline>
+          <Insets>
+            <Top>0.0</Top>
+            <Left>2.0</Left>
+            <Bottom>0.0</Bottom>
+            <Right>3.0</Right>
+          </Insets>
+          <Visible>true</Visible>
+        </Label>
+        <DataDefinition>
+          <Definition>row[&quot;data_interface_plan_progress&quot;]</Definition>
+          <Grouping>
+            <Enabled>false</Enabled>
+            <GroupType>Text</GroupType>
+            <AggregateExpression>Sum</AggregateExpression>
+          </Grouping>
+        </DataDefinition>
+        <SeriesIdentifier>Plan</SeriesIdentifier>
+        <DataPoint>
+          <Components>
+            <Type>Orthogonal_Value</Type>
+          </Components>
+          <Separator>, </Separator>
+        </DataPoint>
+        <LabelPosition>Inside</LabelPosition>
         <Stacked>false</Stacked>
         <Triggers>
           <Condition>onmouseover</Condition>
@@ -6215,7 +6566,7 @@
         <Visible>false</Visible>
       </Label>
       <DataDefinition>
-        <Definition>&quot;Some String&quot;</Definition>
+        <Definition>&quot;Some String that gets abdab&quot;</Definition>
       </DataDefinition>
       <SeriesIdentifier></SeriesIdentifier>
       <DataPoint>
@@ -6235,6 +6586,16 @@
 </model:ChartWithoutAxes>
 ]]></xml-property>
                                                 <property name="outputFormat">SVG</property>
+                                                <list-property name="filter">
+                                                    <structure>
+                                                        <property name="operator">like</property>
+                                                        <expression name="expr" type="javascript">row["id"]</expression>
+                                                        <simple-property-list name="value1">
+                                                            <value>row._outer["id"]</value>
+                                                        </simple-property-list>
+                                                        <property name="updateAggregation">true</property>
+                                                    </structure>
+                                                </list-property>
                                                 <property name="inheritColumns">false</property>
                                                 <property name="marginTop">-3pt</property>
                                                 <property name="height">1.5520833333333333in</property>
@@ -6910,7 +7271,7 @@
                                             </list-property>
                                             <header>
                                                 <grid id="732">
-                                                    <property name="height">0.53125in</property>
+                                                    <property name="height">0.5208333333333334in</property>
                                                     <property name="width">3.5833333333333335in</property>
                                                     <column id="733">
                                                         <property name="width">0.8958333333333334in</property>
@@ -6925,7 +7286,7 @@
                                                         <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <row id="737">
-                                                        <property name="height">0.53125in</property>
+                                                        <property name="height">0.5208333333333334in</property>
                                                         <cell id="738">
                                                             <property name="backgroundColor">#0082C8</property>
                                                             <property name="borderBottomColor">#0082C8</property>
@@ -7007,7 +7368,7 @@
                                             </header>
                                             <detail>
                                                 <grid id="746">
-                                                    <property name="height">0.3854166666666667in</property>
+                                                    <property name="height">0.375in</property>
                                                     <property name="width">3.5833333333333335in</property>
                                                     <column id="747">
                                                         <property name="width">0.8958333333333334in</property>
@@ -7022,7 +7383,7 @@
                                                         <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <row id="751">
-                                                        <property name="height">0.3854166666666667in</property>
+                                                        <property name="height">0.375in</property>
                                                         <cell id="752">
                                                             <property name="borderBottomColor">#0082C8</property>
                                                             <property name="borderBottomStyle">solid</property>
@@ -7126,7 +7487,7 @@
                                             </list-property>
                                             <header>
                                                 <grid id="827">
-                                                    <property name="height">0.5416666666666666in</property>
+                                                    <property name="height">0.5208333333333334in</property>
                                                     <property name="width">3.5416666666666665in</property>
                                                     <column id="828">
                                                         <property name="width">0.7083333333333334in</property>
@@ -7144,7 +7505,7 @@
                                                         <property name="width">0.7083333333333334in</property>
                                                     </column>
                                                     <row id="833">
-                                                        <property name="height">0.5416666666666666in</property>
+                                                        <property name="height">0.5208333333333334in</property>
                                                         <cell id="834">
                                                             <property name="backgroundColor">#0082C8</property>
                                                             <property name="borderBottomColor">#0082C8</property>
