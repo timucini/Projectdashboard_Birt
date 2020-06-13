@@ -6156,7 +6156,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
           <Visible>true</Visible>
         </Label>
         <DataDefinition>
-          <Definition>row[&quot;data_interface_is_progress_objective&quot;]</Definition>
+          <Definition>BirtMath.round(row[&quot;data_interface_is_progress_objective&quot;],4)</Definition>
           <Grouping>
             <GroupType>Text</GroupType>
             <AggregateExpression>Sum</AggregateExpression>
@@ -6456,7 +6456,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
           <Visible>true</Visible>
         </Label>
         <DataDefinition>
-          <Definition>row[&quot;data_interface_plan_progress&quot;]</Definition>
+          <Definition>BirtMath.round(row[&quot;data_interface_plan_progress&quot;],4)</Definition>
           <Grouping>
             <Enabled>false</Enabled>
             <GroupType>Text</GroupType>
