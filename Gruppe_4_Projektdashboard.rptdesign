@@ -5417,7 +5417,7 @@
       <Visible>true</Visible>
       <Label>
         <Caption>
-          <Value>Fertigstellung</Value>
+          <Value>Fertigstellung in %</Value>
           <Font>
             <Size>10.0</Size>
             <Bold>true</Bold>
@@ -5639,23 +5639,20 @@
     <Visible>true</Visible>
   </Block>
   <Dimension>Two_Dimensional</Dimension>
-  <Script>importPackage( Packages.java.util);&#xD;
+  <Script>importPackage(Packages.java.util);&#xD;
 importPackage(Packages.java.lang);&#xD;
-importPackage( Packages.org.eclipse.birt.chart.model.type.impl);&#xD;
-importPackage( Packages.org.eclipse.birt.chart.model.data.impl);&#xD;
+importPackage(Packages.org.eclipse.birt.chart.model.type.impl);&#xD;
+importPackage(Packages.org.eclipse.birt.chart.model.data.impl);&#xD;
 &#xD;
 function afterDataSetFilled( series, dataSet, icsc ) {&#xD;
 	if(series.getClass() == PieSeriesImpl){&#xD;
 		list = dataSet.getValues();&#xD;
 		myarray = new ArrayList();&#xD;
-		newVal = 100 - list[0];&#xD;
-		val = list[0];&#xD;
-		double_newVal = new Double(newVal);&#xD;
-		double_val = new Double(val);&#xD;
-		round_newVal = Math.round(double_newVal, 2);&#xD;
-		round_val = Math.round(double_val, 2)&#xD;
-		myarray.add(round_newVal);&#xD;
-		myarray.add(round_val);&#xD;
+		dataVal = list[0] * 100;&#xD;
+		newVal = 100 - dataVal;&#xD;
+		val = dataVal;&#xD;
+		myarray.add(newVal);&#xD;
+		myarray.add(val);&#xD;
 		dataSet.setValues(myarray);&#xD;
 	} else {&#xD;
 		var catArray = new ArrayList();&#xD;
@@ -6586,16 +6583,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
 </model:ChartWithoutAxes>
 ]]></xml-property>
                                                 <property name="outputFormat">SVG</property>
-                                                <list-property name="filter">
-                                                    <structure>
-                                                        <property name="operator">like</property>
-                                                        <expression name="expr" type="javascript">row["id"]</expression>
-                                                        <simple-property-list name="value1">
-                                                            <value>row._outer["id"]</value>
-                                                        </simple-property-list>
-                                                        <property name="updateAggregation">true</property>
-                                                    </structure>
-                                                </list-property>
                                                 <property name="inheritColumns">false</property>
                                                 <property name="marginTop">-3pt</property>
                                                 <property name="height">1.5520833333333333in</property>
