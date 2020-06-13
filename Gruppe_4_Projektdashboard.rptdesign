@@ -6221,6 +6221,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
           <Thickness>1</Thickness>
           <Visible>true</Visible>
         </LeaderLineAttributes>
+        <LeaderLineStyle>Stretch_To_Side</LeaderLineStyle>
         <LeaderLineLength>10.0</LeaderLineLength>
       </Series>
       <Grouping>
@@ -6587,141 +6588,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                 <property name="marginTop">-3pt</property>
                                                 <property name="height">1.5520833333333333in</property>
                                                 <property name="width">3.5520833333333335in</property>
-                                                <property name="dataSet">Projektdaten</property>
-                                                <list-property name="boundDataColumns">
-                                                    <structure>
-                                                        <property name="name">id</property>
-                                                        <text-property name="displayName">_ID (projects_id)</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["id"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">type</property>
-                                                        <text-property name="displayName">Projektart</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["type"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">manager_id</property>
-                                                        <text-property name="displayName">_ID (staffs_id) [Projektleiter]</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["manager_id"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">state</property>
-                                                        <text-property name="displayName">Projektstatus</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["state"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">internal</property>
-                                                        <text-property name="displayName">Projekttyp (intern/ extern)</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["internal"]</expression>
-                                                        <property name="dataType">boolean</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">priority</property>
-                                                        <text-property name="displayName">Priorität</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["priority"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">indicator_cockpit_costs</property>
-                                                        <text-property name="displayName">Ampel Cockpit Kosten</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["indicator_cockpit_costs"]</expression>
-                                                        <property name="dataType">blob</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">indicator_cockpit_time</property>
-                                                        <text-property name="displayName">Ampel Cockpit Zeit</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["indicator_cockpit_time"]</expression>
-                                                        <property name="dataType">blob</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">name</property>
-                                                        <text-property name="displayName">Name</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["name"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">person_last_name</property>
-                                                        <text-property name="displayName">Nachname [Projektleiter > Person]</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["person_last_name"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">person_full_name</property>
-                                                        <text-property name="displayName">Name [Projektleiter > Person]</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["person_full_name"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">date_to</property>
-                                                        <text-property name="displayName">Projektende</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["date_to"]</expression>
-                                                        <property name="dataType">date</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">date_from</property>
-                                                        <text-property name="displayName">Projektstart</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["date_from"]</expression>
-                                                        <property name="dataType">date</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">hint_state_change</property>
-                                                        <text-property name="displayName">Bemerkung letzer Statuswechsel</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["hint_state_change"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">data_interface_project_budget_actual</property>
-                                                        <text-property name="displayName">Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["data_interface_project_budget_actual"]</expression>
-                                                        <property name="dataType">float</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">data_interface_project_budget_plan</property>
-                                                        <text-property name="displayName">Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["data_interface_project_budget_plan"]</expression>
-                                                        <property name="dataType">float</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">data_interface_is_progress_objective</property>
-                                                        <text-property name="displayName">Fertigstellung (Ist, objektiv) [Projektdaten (Projektzeitraum)]</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["data_interface_is_progress_objective"]</expression>
-                                                        <property name="dataType">float</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">data_interface_plan_progress</property>
-                                                        <text-property name="displayName">Fertigstellung (Plan) [Projektdaten (Projektzeitraum)]</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["data_interface_plan_progress"]</expression>
-                                                        <property name="dataType">float</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">planning_type</property>
-                                                        <text-property name="displayName">Planungsart</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["planning_type"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">indicator_sheet_progress</property>
-                                                        <text-property name="displayName">Ampel Bogen Fortschritt</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["indicator_sheet_progress"]</expression>
-                                                        <property name="dataType">blob</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">project_name_and_number</property>
-                                                        <text-property name="displayName">project_name_and_number</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["project_name_and_number"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                    <structure>
-                                                        <property name="name">project_time</property>
-                                                        <text-property name="displayName">project_time</text-property>
-                                                        <expression name="expression" type="javascript">dataSetRow["project_time"]</expression>
-                                                        <property name="dataType">string</property>
-                                                    </structure>
-                                                </list-property>
                                             </extended-item>
                                         </cell>
                                     </row>
