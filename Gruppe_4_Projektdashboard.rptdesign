@@ -16,7 +16,7 @@
             <list-property name="computedColumns">
                 <structure>
                     <property name="name">project_name_and_number</property>
-                    <expression name="expression">"\"" + row["name"] + " (" + row["id"] + ")\""</expression>
+                    <expression name="expression">"\"" + row["name"] + " (" + row["number"] + ")\""</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
@@ -146,6 +146,24 @@
                     <text-property name="displayName">Ampel Bogen Fortschritt</text-property>
                     <text-property name="heading">Ampel Bogen Fortschritt</text-property>
                 </structure>
+                <structure>
+                    <property name="columnName">progress_plan</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Fertigstellung (Plan)</text-property>
+                    <text-property name="heading">Fertigstellung (Plan)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">progress_subjective</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Fortschritt (subjektiv)</text-property>
+                    <text-property name="heading">Fortschritt (subjektiv)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">number</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Projektnummer</text-property>
+                    <text-property name="heading">Projektnummer</text-property>
+                </structure>
             </list-property>
             <list-property name="parameters">
                 <structure>
@@ -164,7 +182,7 @@
                     <property name="nativeName">end_date_from</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
-                    <property name="position">2</property>
+                    <property name="position">7</property>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
                     <property name="isInput">true</property>
@@ -174,7 +192,7 @@
                     <property name="nativeName">end_date_to</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
-                    <property name="position">3</property>
+                    <property name="position">8</property>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
                     <property name="isInput">true</property>
@@ -184,7 +202,7 @@
                     <property name="nativeName">start_date_from</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
-                    <property name="position">4</property>
+                    <property name="position">15</property>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
                     <property name="isInput">true</property>
@@ -194,7 +212,7 @@
                     <property name="nativeName">start_date_to</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
-                    <property name="position">5</property>
+                    <property name="position">16</property>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
                     <property name="isInput">true</property>
@@ -202,9 +220,8 @@
                 <structure>
                     <property name="name">use_all_projects</property>
                     <property name="nativeName">use_all_projects</property>
-                    <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
-                    <property name="position">6</property>
+                    <property name="position">17</property>
                     <expression name="defaultValue" type="constant">false</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -213,9 +230,8 @@
                 <structure>
                     <property name="name">virtual_included</property>
                     <property name="nativeName">virtual_included</property>
-                    <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
-                    <property name="position">7</property>
+                    <property name="position">18</property>
                     <expression name="defaultValue" type="constant">false</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -226,7 +242,7 @@
                     <property name="nativeName">portfolio_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">8</property>
+                    <property name="position">13</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -248,7 +264,7 @@
                     <property name="nativeName">currency_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">10</property>
+                    <property name="position">3</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -259,7 +275,7 @@
                     <property name="nativeName">department_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">11</property>
+                    <property name="position">5</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -281,7 +297,7 @@
                     <property name="nativeName">baseline_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">13</property>
+                    <property name="position">2</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -303,7 +319,7 @@
                     <property name="nativeName">data_interface_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">15</property>
+                    <property name="position">4</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -314,7 +330,7 @@
                     <property name="nativeName">department_max_share_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">16</property>
+                    <property name="position">6</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -325,7 +341,7 @@
                     <property name="nativeName">manager_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
-                    <property name="position">17</property>
+                    <property name="position">11</property>
                     <expression name="defaultValue" type="constant">__no_value__</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -334,9 +350,8 @@
                 <structure>
                     <property name="name">ignore_filtered_results</property>
                     <property name="nativeName">ignore_filtered_results</property>
-                    <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
-                    <property name="position">18</property>
+                    <property name="position">10</property>
                     <expression name="defaultValue" type="constant">false</expression>
                     <property name="isOptional">true</property>
                     <property name="allowNull">true</property>
@@ -744,11 +759,26 @@
                     </structure>
                     <structure>
                         <property name="position">21</property>
+                        <property name="name">progress_plan</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">progress_subjective</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">number</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
                         <property name="name">project_name_and_number</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">22</property>
+                        <property name="position">25</property>
                         <property name="name">project_time</property>
                         <property name="dataType">string</property>
                     </structure>
@@ -896,8 +926,29 @@
                     <property name="dataType">blob</property>
                     <property name="nativeDataType">2004</property>
                 </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">progress_plan</property>
+                    <property name="nativeName">progress_plan</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">progress_subjective</property>
+                    <property name="nativeName">progress_subjective</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">number</property>
+                    <property name="nativeName">number</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[{/projects}#:#{id#,#String#,#/@id#,##,#_ID (projects_id)};{type#,#String#,#/@type#,##,#Projektart};{manager_id#,#String#,##R#/manager/@id#,##,#_ID (staffs_id) [Projektleiter]};{state#,#String#,#/@state#,##,#Projektstatus};{internal#,#Boolean#,#/@internal#,##,#Projekttyp (intern/ extern)};{priority#,#String#,#/@priority#,##,#Priorität};{indicator_cockpit_costs#,#Blob#,#/@indicator_cockpit_costs#,##,#Ampel Cockpit Kosten};{indicator_cockpit_time#,#Blob#,#/@indicator_cockpit_time#,##,#Ampel Cockpit Zeit};{name#,#String#,#/@name#,##,#Name};{person_last_name#,#String#,##R#/manager/person/@last_name#,##,#Nachname [Projektleiter > Person]};{person_full_name#,#String#,##R#/manager/person/@full_name#,##,#Name [Projektleiter > Person]};{date_to#,#Date#,#/@date_to#,##,#Projektende};{date_from#,#Date#,#/@date_from#,##,#Projektstart};{hint_state_change#,#String#,#/@hint_state_change#,##,#Bemerkung letzer Statuswechsel};{data_interface_project_budget_actual#,#Double#,##R#/data_interface/@project_budget_actual#,##,#Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]};{data_interface_project_budget_plan#,#Double#,##R#/data_interface/@project_budget_plan#,##,#Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]};{data_interface_is_progress_objective#,#Double#,##R#/data_interface/@is_progress_objective#,##,#Fertigstellung (Ist, objektiv) [Projektdaten (Projektzeitraum)]};{data_interface_plan_progress#,#Double#,##R#/data_interface/@plan_progress#,##,#Fertigstellung (Plan) [Projektdaten (Projektzeitraum)]};{planning_type#,#String#,#/@planning_type#,##,#Planungsart};{indicator_sheet_progress#,#Blob#,#/@indicator_sheet_progress#,##,#Ampel Bogen Fortschritt}#:#]]></xml-property>
+            <xml-property name="queryText"><![CDATA[{/projects}#:#{id#,#String#,#/@id#,##,#_ID (projects_id)};{type#,#String#,#/@type#,##,#Projektart};{manager_id#,#String#,##R#/manager/@id#,##,#_ID (staffs_id) [Projektleiter]};{state#,#String#,#/@state#,##,#Projektstatus};{internal#,#Boolean#,#/@internal#,##,#Projekttyp (intern/ extern)};{priority#,#String#,#/@priority#,##,#Priorität};{indicator_cockpit_costs#,#Blob#,#/@indicator_cockpit_costs#,##,#Ampel Cockpit Kosten};{indicator_cockpit_time#,#Blob#,#/@indicator_cockpit_time#,##,#Ampel Cockpit Zeit};{name#,#String#,#/@name#,##,#Name};{person_last_name#,#String#,##R#/manager/person/@last_name#,##,#Nachname [Projektleiter > Person]};{person_full_name#,#String#,##R#/manager/person/@full_name#,##,#Name [Projektleiter > Person]};{date_to#,#Date#,#/@date_to#,##,#Projektende};{date_from#,#Date#,#/@date_from#,##,#Projektstart};{hint_state_change#,#String#,#/@hint_state_change#,##,#Bemerkung letzer Statuswechsel};{data_interface_project_budget_actual#,#Double#,##R#/data_interface/@project_budget_actual#,##,#Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]};{data_interface_project_budget_plan#,#Double#,##R#/data_interface/@project_budget_plan#,##,#Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]};{data_interface_is_progress_objective#,#Double#,##R#/data_interface/@is_progress_objective#,##,#Fertigstellung (Ist, objektiv) [Projektdaten (Projektzeitraum)]};{data_interface_plan_progress#,#Double#,##R#/data_interface/@plan_progress#,##,#Fertigstellung (Plan) [Projektdaten (Projektzeitraum)]};{planning_type#,#String#,#/@planning_type#,##,#Planungsart};{indicator_sheet_progress#,#Blob#,#/@indicator_sheet_progress#,##,#Ampel Bogen Fortschritt};{progress_plan#,#Double#,#/@progress_plan#,##,#Fertigstellung (Plan)};{progress_subjective#,#Double#,#/@progress_subjective#,##,#Fortschritt (subjektiv)};{number#,#String#,#/@number#,##,#Projektnummer}#:#]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -931,8 +982,128 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>end_date_from</design:name>
+            <design:name>baseline_id</design:name>
             <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>currency_id</design:name>
+            <design:position>3</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>data_interface_id</design:name>
+            <design:position>4</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>department_id</design:name>
+            <design:position>5</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>department_max_share_id</design:name>
+            <design:position>6</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+              <design:values>__no_value__</design:values>
+              <design:values>__no_value__</design:values>
+            </design:defaultValues>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>end_date_from</design:name>
+            <design:position>7</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
@@ -952,127 +1123,15 @@
         <design:attributes>
           <design:identifier>
             <design:name>end_date_to</design:name>
-            <design:position>3</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>start_date_from</design:name>
-            <design:position>4</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>start_date_to</design:name>
-            <design:position>5</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>use_all_projects</design:name>
-            <design:position>6</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>false</design:values>
-              <design:values>false</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>virtual_included</design:name>
-            <design:position>7</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>false</design:values>
-              <design:values>false</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>portfolio_id</design:name>
             <design:position>8</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
         </design:attributes>
         <design:inputAttributes>
           <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
         </design:inputAttributes>
@@ -1107,10 +1166,10 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>currency_id</design:name>
+            <design:name>ignore_filtered_results</design:name>
             <design:position>10</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
@@ -1118,8 +1177,8 @@
         <design:inputAttributes>
           <design:elementAttributes>
             <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
+              <design:values>false</design:values>
+              <design:values>false</design:values>
             </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
@@ -1131,7 +1190,7 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>department_id</design:name>
+            <design:name>manager_id</design:name>
             <design:position>11</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
@@ -1179,7 +1238,7 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>baseline_id</design:name>
+            <design:name>portfolio_id</design:name>
             <design:position>13</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
@@ -1227,20 +1286,16 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>data_interface_id</design:name>
+            <design:name>start_date_from</design:name>
             <design:position>15</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
         </design:attributes>
         <design:inputAttributes>
           <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
         </design:inputAttributes>
@@ -1251,20 +1306,16 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>department_max_share_id</design:name>
+            <design:name>start_date_to</design:name>
             <design:position>16</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
         </design:attributes>
         <design:inputAttributes>
           <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
         </design:inputAttributes>
@@ -1275,10 +1326,10 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>manager_id</design:name>
+            <design:name>use_all_projects</design:name>
             <design:position>17</design:position>
           </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
           <design:precision>-1</design:precision>
           <design:scale>-1</design:scale>
           <design:nullability>Nullable</design:nullability>
@@ -1286,8 +1337,8 @@
         <design:inputAttributes>
           <design:elementAttributes>
             <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
+              <design:values>false</design:values>
+              <design:values>false</design:values>
             </design:defaultValues>
             <design:optional>true</design:optional>
           </design:elementAttributes>
@@ -1299,7 +1350,7 @@
         <design:inOutMode>In</design:inOutMode>
         <design:attributes>
           <design:identifier>
-            <design:name>ignore_filtered_results</design:name>
+            <design:name>virtual_included</design:name>
             <design:position>18</design:position>
           </design:identifier>
           <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
@@ -4984,6 +5035,42 @@
                                 <property name="dataType">date</property>
                                 <property name="allowExport">true</property>
                             </structure>
+                            <structure>
+                                <property name="name">indicator_sheet_progress</property>
+                                <text-property name="displayName">Ampel Bogen Fortschritt</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["indicator_sheet_progress"]</expression>
+                                <property name="dataType">blob</property>
+                            </structure>
+                            <structure>
+                                <property name="name">progress_plan</property>
+                                <text-property name="displayName">Fertigstellung (Plan)</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["progress_plan"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">progress_subjective</property>
+                                <text-property name="displayName">Fortschritt (subjektiv)</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">number</property>
+                                <text-property name="displayName">Projektnummer</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["number"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">project_name_and_number</property>
+                                <text-property name="displayName">project_name_and_number</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["project_name_and_number"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">project_time</property>
+                                <text-property name="displayName">project_time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["project_time"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
                         </list-property>
                         <group id="67">
                             <property name="groupName">Gruppe_Projekt</property>
@@ -5648,7 +5735,7 @@ function afterDataSetFilled( series, dataSet, icsc ) {&#xD;
 	if(series.getClass() == PieSeriesImpl){&#xD;
 		list = dataSet.getValues();&#xD;
 		myarray = new ArrayList();&#xD;
-		dataVal = list[0] * 100;&#xD;
+		dataVal = list[0];&#xD;
 		newVal = 100 - dataVal;&#xD;
 		val = dataVal;&#xD;
 		myarray.add(newVal);&#xD;
@@ -6156,7 +6243,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
           <Visible>true</Visible>
         </Label>
         <DataDefinition>
-          <Definition>BirtMath.round(row[&quot;data_interface_is_progress_objective&quot;],4)</Definition>
+          <Definition>BirtMath.round(row[&quot;progress_subjective&quot;],2)</Definition>
           <Grouping>
             <GroupType>Text</GroupType>
             <AggregateExpression>Sum</AggregateExpression>
@@ -6456,7 +6543,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
           <Visible>true</Visible>
         </Label>
         <DataDefinition>
-          <Definition>BirtMath.round(row[&quot;data_interface_plan_progress&quot;],4)</Definition>
+          <Definition>BirtMath.round(row[&quot;progress_plan&quot;],2)</Definition>
           <Grouping>
             <Enabled>false</Enabled>
             <GroupType>Text</GroupType>
