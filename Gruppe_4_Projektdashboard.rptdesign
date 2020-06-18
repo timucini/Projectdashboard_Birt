@@ -4871,33 +4871,6 @@
             <text-property name="displayName">Haupt-Grid</text-property>
             <property name="height">7.6875in</property>
             <property name="width">11.34375in</property>
-            <property name="dataSet">Kontext</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">current_user_id</property>
-                    <text-property name="displayName">_ID (users_id) [Aktueller Benutzer]</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["current_user_id"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">person_id</property>
-                    <text-property name="displayName">_ID (persons_id) [Aktueller Benutzer > Person]</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["person_id"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">company_logo</property>
-                    <text-property name="displayName">Firmen-Logo</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["company_logo"]</expression>
-                    <property name="dataType">blob</property>
-                </structure>
-                <structure>
-                    <property name="name">date_today</property>
-                    <text-property name="displayName">date_today</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["date_today"]</expression>
-                    <property name="dataType">date</property>
-                </structure>
-            </list-property>
             <column id="63">
                 <property name="width">11.34375in</property>
             </column>
@@ -5184,7 +5157,7 @@
                                     </row>
                                 </grid>
                                 <grid name="Grid_List_Title" id="366">
-                                    <property name="height">1.4895833333333333in</property>
+                                    <property name="height">1.5208333333333333in</property>
                                     <property name="width">11.125in</property>
                                     <column id="367">
                                         <property name="width">3.625in</property>
@@ -5202,7 +5175,7 @@
                                         <property name="width">3.59375in</property>
                                     </column>
                                     <row id="369">
-                                        <property name="height">1.25in</property>
+                                        <property name="height">1.0416666666666667in</property>
                                         <cell id="370">
                                             <property name="style">NewStyle</property>
                                             <property name="borderLeftColor">#0082C8</property>
@@ -6685,7 +6658,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                         <property name="borderRightColor">#0080FF</property>
                                         <property name="borderRightStyle">solid</property>
                                         <property name="borderRightWidth">thin</property>
-                                        <property name="height">0.23958333333333334in</property>
+                                        <property name="height">0.4791666666666667in</property>
                                         <cell id="418">
                                             <property name="colSpan">3</property>
                                             <property name="rowSpan">1</property>
@@ -6700,7 +6673,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                             <property name="borderTopStyle">none</property>
                                             <property name="paddingRight">1pt</property>
                                             <grid id="905">
-                                                <property name="height">0.23958333333333334in</property>
+                                                <property name="height">0.46875in</property>
                                                 <property name="width">7.260416666666667in</property>
                                                 <property name="zIndex">3</property>
                                                 <column id="906">
@@ -6710,14 +6683,16 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                     <property name="width">4.84375in</property>
                                                 </column>
                                                 <row id="907">
-                                                    <property name="height">0.23958333333333334in</property>
+                                                    <property name="height">0.46875in</property>
                                                     <cell id="908">
+                                                        <property name="paddingTop">0pt</property>
                                                         <label id="914">
                                                             <property name="fontWeight">bold</property>
                                                             <text-property name="text">Bemerkung letzter Statuswechsel:</text-property>
                                                         </label>
                                                     </cell>
                                                     <cell id="912">
+                                                        <property name="paddingTop">0pt</property>
                                                         <data id="915">
                                                             <property name="resultSetColumn">hint_state_change</property>
                                                         </data>
@@ -7428,21 +7403,18 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                             <header>
                                                 <grid id="827">
                                                     <property name="height">0.5208333333333334in</property>
-                                                    <property name="width">3.5416666666666665in</property>
+                                                    <property name="width">3.5833333333333335in</property>
                                                     <column id="828">
-                                                        <property name="width">0.7083333333333334in</property>
+                                                        <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <column id="829">
-                                                        <property name="width">0.7083333333333334in</property>
+                                                        <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <column id="830">
-                                                        <property name="width">0.7083333333333334in</property>
-                                                    </column>
-                                                    <column id="831">
-                                                        <property name="width">0.7083333333333334in</property>
+                                                        <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <column id="832">
-                                                        <property name="width">0.7083333333333334in</property>
+                                                        <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <row id="833">
                                                         <property name="height">0.5208333333333334in</property>
@@ -7516,28 +7488,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                                 <property name="fontSize">9pt</property>
                                                                 <property name="color">#FFFFFF</property>
                                                                 <text-property name="text">Aktivität</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="840">
-                                                            <property name="backgroundColor">#0082C8</property>
-                                                            <property name="borderBottomColor">#0082C8</property>
-                                                            <property name="borderBottomStyle">solid</property>
-                                                            <property name="borderBottomWidth">thin</property>
-                                                            <property name="borderRightStyle">solid</property>
-                                                            <property name="borderRightWidth">thin</property>
-                                                            <property name="borderTopColor">#0082C8</property>
-                                                            <property name="borderTopStyle">solid</property>
-                                                            <property name="borderTopWidth">thin</property>
-                                                            <property name="paddingTop">0pt</property>
-                                                            <property name="paddingLeft">0pt</property>
-                                                            <property name="paddingBottom">0pt</property>
-                                                            <property name="paddingRight">0pt</property>
-                                                            <property name="textAlign">center</property>
-                                                            <property name="verticalAlign">middle</property>
-                                                            <label id="841">
-                                                                <property name="fontSize">9pt</property>
-                                                                <property name="color">#FFFFFF</property>
-                                                                <text-property name="text">Status</text-property>
                                                             </label>
                                                         </cell>
                                                         <cell id="842">
@@ -7696,21 +7646,18 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                     <detail>
                                                         <grid id="791">
                                                             <property name="height">0.375in</property>
-                                                            <property name="width">3.5416666666666665in</property>
+                                                            <property name="width">3.5833333333333335in</property>
                                                             <column id="792">
-                                                                <property name="width">0.7083333333333334in</property>
+                                                                <property name="width">0.8958333333333334in</property>
                                                             </column>
                                                             <column id="793">
-                                                                <property name="width">0.7083333333333334in</property>
+                                                                <property name="width">0.8958333333333334in</property>
                                                             </column>
                                                             <column id="794">
-                                                                <property name="width">0.7083333333333334in</property>
-                                                            </column>
-                                                            <column id="795">
-                                                                <property name="width">0.7083333333333334in</property>
+                                                                <property name="width">0.8958333333333334in</property>
                                                             </column>
                                                             <column id="796">
-                                                                <property name="width">0.7083333333333334in</property>
+                                                                <property name="width">0.8958333333333334in</property>
                                                             </column>
                                                             <row id="797">
                                                                 <property name="height">0.375in</property>
@@ -7768,24 +7715,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                                     <data id="805">
                                                                         <property name="fontSize">9pt</property>
                                                                         <property name="resultSetColumn">task_name</property>
-                                                                    </data>
-                                                                </cell>
-                                                                <cell id="801">
-                                                                    <property name="borderBottomColor">#0082C8</property>
-                                                                    <property name="borderBottomStyle">solid</property>
-                                                                    <property name="borderBottomWidth">thin</property>
-                                                                    <property name="borderRightColor">#000000</property>
-                                                                    <property name="borderRightStyle">solid</property>
-                                                                    <property name="borderRightWidth">thin</property>
-                                                                    <property name="paddingTop">0pt</property>
-                                                                    <property name="paddingLeft">0pt</property>
-                                                                    <property name="paddingBottom">0pt</property>
-                                                                    <property name="paddingRight">0pt</property>
-                                                                    <property name="textAlign">center</property>
-                                                                    <property name="verticalAlign">middle</property>
-                                                                    <data id="806">
-                                                                        <property name="fontSize">9pt</property>
-                                                                        <property name="resultSetColumn">state</property>
                                                                     </data>
                                                                 </cell>
                                                                 <cell id="802">
@@ -8394,21 +8323,18 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                             <header>
                                                 <grid id="852">
                                                     <property name="height">0.5208333333333334in</property>
-                                                    <property name="width">3.5416666666666665in</property>
+                                                    <property name="width">3.5833333333333335in</property>
                                                     <column id="853">
-                                                        <property name="width">0.7083333333333334in</property>
+                                                        <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <column id="854">
-                                                        <property name="width">0.7083333333333334in</property>
+                                                        <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <column id="855">
-                                                        <property name="width">0.7083333333333334in</property>
-                                                    </column>
-                                                    <column id="856">
-                                                        <property name="width">0.7083333333333334in</property>
+                                                        <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <column id="857">
-                                                        <property name="width">0.7083333333333334in</property>
+                                                        <property name="width">0.8958333333333334in</property>
                                                     </column>
                                                     <row id="858">
                                                         <property name="height">0.5208333333333334in</property>
@@ -8482,28 +8408,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                                 <property name="fontSize">9pt</property>
                                                                 <property name="color">#FFFFFF</property>
                                                                 <text-property name="text">Status</text-property>
-                                                            </label>
-                                                        </cell>
-                                                        <cell id="865">
-                                                            <property name="backgroundColor">#0082C8</property>
-                                                            <property name="borderBottomColor">#0082C8</property>
-                                                            <property name="borderBottomStyle">solid</property>
-                                                            <property name="borderBottomWidth">thin</property>
-                                                            <property name="borderRightStyle">solid</property>
-                                                            <property name="borderRightWidth">thin</property>
-                                                            <property name="borderTopColor">#0082C8</property>
-                                                            <property name="borderTopStyle">solid</property>
-                                                            <property name="borderTopWidth">thin</property>
-                                                            <property name="paddingTop">0pt</property>
-                                                            <property name="paddingLeft">0pt</property>
-                                                            <property name="paddingBottom">0pt</property>
-                                                            <property name="paddingRight">0pt</property>
-                                                            <property name="textAlign">center</property>
-                                                            <property name="verticalAlign">middle</property>
-                                                            <label id="866">
-                                                                <property name="fontSize">9pt</property>
-                                                                <property name="color">#FFFFFF</property>
-                                                                <text-property name="text">Verantwortl.</text-property>
                                                             </label>
                                                         </cell>
                                                         <cell id="867">
@@ -8647,21 +8551,18 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                     <detail>
                                                         <grid id="870">
                                                             <property name="height">0.375in</property>
-                                                            <property name="width">3.5416666666666665in</property>
+                                                            <property name="width">3.5833333333333335in</property>
                                                             <column id="871">
-                                                                <property name="width">0.7083333333333334in</property>
+                                                                <property name="width">0.8958333333333334in</property>
                                                             </column>
                                                             <column id="872">
-                                                                <property name="width">0.7083333333333334in</property>
+                                                                <property name="width">0.8958333333333334in</property>
                                                             </column>
                                                             <column id="873">
-                                                                <property name="width">0.7083333333333334in</property>
-                                                            </column>
-                                                            <column id="874">
-                                                                <property name="width">0.7083333333333334in</property>
+                                                                <property name="width">0.8958333333333334in</property>
                                                             </column>
                                                             <column id="875">
-                                                                <property name="width">0.7083333333333334in</property>
+                                                                <property name="width">0.8958333333333334in</property>
                                                             </column>
                                                             <row id="876">
                                                                 <property name="height">0.375in</property>
@@ -8719,24 +8620,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                                     <data id="882">
                                                                         <property name="fontSize">9pt</property>
                                                                         <property name="resultSetColumn">state</property>
-                                                                    </data>
-                                                                </cell>
-                                                                <cell id="883">
-                                                                    <property name="borderBottomColor">#0082C8</property>
-                                                                    <property name="borderBottomStyle">solid</property>
-                                                                    <property name="borderBottomWidth">thin</property>
-                                                                    <property name="borderRightColor">#000000</property>
-                                                                    <property name="borderRightStyle">solid</property>
-                                                                    <property name="borderRightWidth">thin</property>
-                                                                    <property name="paddingTop">0pt</property>
-                                                                    <property name="paddingLeft">0pt</property>
-                                                                    <property name="paddingBottom">0pt</property>
-                                                                    <property name="paddingRight">0pt</property>
-                                                                    <property name="textAlign">center</property>
-                                                                    <property name="verticalAlign">middle</property>
-                                                                    <data id="884">
-                                                                        <property name="fontSize">9pt</property>
-                                                                        <property name="resultSetColumn">owner_last_name</property>
                                                                     </data>
                                                                 </cell>
                                                                 <cell id="885">
