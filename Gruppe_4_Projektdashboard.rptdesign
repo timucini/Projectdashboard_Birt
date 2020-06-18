@@ -6651,7 +6651,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
         <Visible>false</Visible>
       </Label>
       <DataDefinition>
-        <Definition>&quot;Some String that gets abdab&quot;</Definition>
+        <Definition>&quot;Some String that gets replaced&quot;</Definition>
       </DataDefinition>
       <SeriesIdentifier></SeriesIdentifier>
       <DataPoint>
@@ -6861,7 +6861,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                             </list-property>
                                             <list-property name="sort">
                                                 <structure>
-                                                    <expression name="key" type="javascript">row["date_to"]</expression>
+                                                    <expression name="key" type="javascript">row["date_from"]</expression>
                                                     <property name="direction">asc</property>
                                                     <property name="strength">-1</property>
                                                 </structure>
@@ -7187,7 +7187,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                             </list-property>
                                             <list-property name="sort">
                                                 <structure>
-                                                    <expression name="key" type="javascript">row["date_to"]</expression>
+                                                    <expression name="key" type="javascript">row["date_from"]</expression>
                                                     <property name="direction">asc</property>
                                                     <property name="strength">-1</property>
                                                 </structure>
@@ -7673,7 +7673,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                     </list-property>
                                                     <list-property name="sort">
                                                         <structure>
-                                                            <expression name="key" type="javascript">row["due_date"]</expression>
+                                                            <expression name="key" type="javascript">row["start_date"]</expression>
                                                             <property name="direction">asc</property>
                                                             <property name="strength">-1</property>
                                                         </structure>
