@@ -63,18 +63,6 @@
                     <text-property name="heading">Priorität</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">indicator_cockpit_costs</property>
-                    <property name="analysis">attribute</property>
-                    <text-property name="displayName">Ampel Cockpit Kosten</text-property>
-                    <text-property name="heading">Ampel Cockpit Kosten</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">indicator_cockpit_time</property>
-                    <property name="analysis">attribute</property>
-                    <text-property name="displayName">Ampel Cockpit Zeit</text-property>
-                    <text-property name="heading">Ampel Cockpit Zeit</text-property>
-                </structure>
-                <structure>
                     <property name="columnName">name</property>
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">Name</text-property>
@@ -123,28 +111,10 @@
                     <text-property name="heading">Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">data_interface_is_progress_objective</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">Fertigstellung (Ist, objektiv) [Projektdaten (Projektzeitraum)]</text-property>
-                    <text-property name="heading">Fertigstellung (Ist, objektiv) [Projektdaten (Projektzeitraum)]</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">data_interface_plan_progress</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">Fertigstellung (Plan) [Projektdaten (Projektzeitraum)]</text-property>
-                    <text-property name="heading">Fertigstellung (Plan) [Projektdaten (Projektzeitraum)]</text-property>
-                </structure>
-                <structure>
                     <property name="columnName">planning_type</property>
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">Planungsart</text-property>
                     <text-property name="heading">Planungsart</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">indicator_sheet_progress</property>
-                    <property name="analysis">attribute</property>
-                    <text-property name="displayName">Ampel Bogen Fortschritt</text-property>
-                    <text-property name="heading">Ampel Bogen Fortschritt</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">progress_plan</property>
@@ -220,6 +190,7 @@
                 <structure>
                     <property name="name">use_all_projects</property>
                     <property name="nativeName">use_all_projects</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
                     <property name="position">17</property>
                     <expression name="defaultValue" type="constant">false</expression>
@@ -230,6 +201,7 @@
                 <structure>
                     <property name="name">virtual_included</property>
                     <property name="nativeName">virtual_included</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
                     <property name="position">18</property>
                     <expression name="defaultValue" type="constant">false</expression>
@@ -350,6 +322,7 @@
                 <structure>
                     <property name="name">ignore_filtered_results</property>
                     <property name="nativeName">ignore_filtered_results</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">16</property>
                     <property name="position">10</property>
                     <expression name="defaultValue" type="constant">false</expression>
@@ -689,96 +662,71 @@
                     </structure>
                     <structure>
                         <property name="position">7</property>
-                        <property name="name">indicator_cockpit_costs</property>
-                        <property name="dataType">blob</property>
-                    </structure>
-                    <structure>
-                        <property name="position">8</property>
-                        <property name="name">indicator_cockpit_time</property>
-                        <property name="dataType">blob</property>
-                    </structure>
-                    <structure>
-                        <property name="position">9</property>
                         <property name="name">name</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">10</property>
+                        <property name="position">8</property>
                         <property name="name">person_last_name</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">11</property>
+                        <property name="position">9</property>
                         <property name="name">person_full_name</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">12</property>
+                        <property name="position">10</property>
                         <property name="name">date_to</property>
                         <property name="dataType">date</property>
                     </structure>
                     <structure>
-                        <property name="position">13</property>
+                        <property name="position">11</property>
                         <property name="name">date_from</property>
                         <property name="dataType">date</property>
                     </structure>
                     <structure>
-                        <property name="position">14</property>
+                        <property name="position">12</property>
                         <property name="name">hint_state_change</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">15</property>
+                        <property name="position">13</property>
                         <property name="name">data_interface_project_budget_actual</property>
                         <property name="dataType">float</property>
                     </structure>
                     <structure>
-                        <property name="position">16</property>
+                        <property name="position">14</property>
                         <property name="name">data_interface_project_budget_plan</property>
                         <property name="dataType">float</property>
                     </structure>
                     <structure>
-                        <property name="position">17</property>
-                        <property name="name">data_interface_is_progress_objective</property>
-                        <property name="dataType">float</property>
-                    </structure>
-                    <structure>
-                        <property name="position">18</property>
-                        <property name="name">data_interface_plan_progress</property>
-                        <property name="dataType">float</property>
-                    </structure>
-                    <structure>
-                        <property name="position">19</property>
+                        <property name="position">15</property>
                         <property name="name">planning_type</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">20</property>
-                        <property name="name">indicator_sheet_progress</property>
-                        <property name="dataType">blob</property>
-                    </structure>
-                    <structure>
-                        <property name="position">21</property>
+                        <property name="position">16</property>
                         <property name="name">progress_plan</property>
                         <property name="dataType">float</property>
                     </structure>
                     <structure>
-                        <property name="position">22</property>
+                        <property name="position">17</property>
                         <property name="name">progress_subjective</property>
                         <property name="dataType">float</property>
                     </structure>
                     <structure>
-                        <property name="position">23</property>
+                        <property name="position">18</property>
                         <property name="name">number</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">24</property>
+                        <property name="position">19</property>
                         <property name="name">project_name_and_number</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">25</property>
+                        <property name="position">20</property>
                         <property name="name">project_time</property>
                         <property name="dataType">string</property>
                     </structure>
@@ -830,125 +778,90 @@
                 </structure>
                 <structure>
                     <property name="position">7</property>
-                    <property name="name">indicator_cockpit_costs</property>
-                    <property name="nativeName">indicator_cockpit_costs</property>
-                    <property name="dataType">blob</property>
-                    <property name="nativeDataType">2004</property>
-                </structure>
-                <structure>
-                    <property name="position">8</property>
-                    <property name="name">indicator_cockpit_time</property>
-                    <property name="nativeName">indicator_cockpit_time</property>
-                    <property name="dataType">blob</property>
-                    <property name="nativeDataType">2004</property>
-                </structure>
-                <structure>
-                    <property name="position">9</property>
                     <property name="name">name</property>
                     <property name="nativeName">name</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">10</property>
+                    <property name="position">8</property>
                     <property name="name">person_last_name</property>
                     <property name="nativeName">person_last_name</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">11</property>
+                    <property name="position">9</property>
                     <property name="name">person_full_name</property>
                     <property name="nativeName">person_full_name</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">12</property>
+                    <property name="position">10</property>
                     <property name="name">date_to</property>
                     <property name="nativeName">date_to</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
                 </structure>
                 <structure>
-                    <property name="position">13</property>
+                    <property name="position">11</property>
                     <property name="name">date_from</property>
                     <property name="nativeName">date_from</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
                 </structure>
                 <structure>
-                    <property name="position">14</property>
+                    <property name="position">12</property>
                     <property name="name">hint_state_change</property>
                     <property name="nativeName">hint_state_change</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">15</property>
+                    <property name="position">13</property>
                     <property name="name">data_interface_project_budget_actual</property>
                     <property name="nativeName">data_interface_project_budget_actual</property>
                     <property name="dataType">float</property>
                     <property name="nativeDataType">8</property>
                 </structure>
                 <structure>
-                    <property name="position">16</property>
+                    <property name="position">14</property>
                     <property name="name">data_interface_project_budget_plan</property>
                     <property name="nativeName">data_interface_project_budget_plan</property>
                     <property name="dataType">float</property>
                     <property name="nativeDataType">8</property>
                 </structure>
                 <structure>
-                    <property name="position">17</property>
-                    <property name="name">data_interface_is_progress_objective</property>
-                    <property name="nativeName">data_interface_is_progress_objective</property>
-                    <property name="dataType">float</property>
-                    <property name="nativeDataType">8</property>
-                </structure>
-                <structure>
-                    <property name="position">18</property>
-                    <property name="name">data_interface_plan_progress</property>
-                    <property name="nativeName">data_interface_plan_progress</property>
-                    <property name="dataType">float</property>
-                    <property name="nativeDataType">8</property>
-                </structure>
-                <structure>
-                    <property name="position">19</property>
+                    <property name="position">15</property>
                     <property name="name">planning_type</property>
                     <property name="nativeName">planning_type</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">20</property>
-                    <property name="name">indicator_sheet_progress</property>
-                    <property name="nativeName">indicator_sheet_progress</property>
-                    <property name="dataType">blob</property>
-                    <property name="nativeDataType">2004</property>
-                </structure>
-                <structure>
-                    <property name="position">21</property>
+                    <property name="position">16</property>
                     <property name="name">progress_plan</property>
                     <property name="nativeName">progress_plan</property>
                     <property name="dataType">float</property>
                     <property name="nativeDataType">8</property>
                 </structure>
                 <structure>
-                    <property name="position">22</property>
+                    <property name="position">17</property>
                     <property name="name">progress_subjective</property>
                     <property name="nativeName">progress_subjective</property>
                     <property name="dataType">float</property>
                     <property name="nativeDataType">8</property>
                 </structure>
                 <structure>
-                    <property name="position">23</property>
+                    <property name="position">18</property>
                     <property name="name">number</property>
                     <property name="nativeName">number</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[{/projects}#:#{id#,#String#,#/@id#,##,#_ID (projects_id)};{type#,#String#,#/@type#,##,#Projektart};{manager_id#,#String#,##R#/manager/@id#,##,#_ID (staffs_id) [Projektleiter]};{state#,#String#,#/@state#,##,#Projektstatus};{internal#,#Boolean#,#/@internal#,##,#Projekttyp (intern/ extern)};{priority#,#String#,#/@priority#,##,#Priorität};{indicator_cockpit_costs#,#Blob#,#/@indicator_cockpit_costs#,##,#Ampel Cockpit Kosten};{indicator_cockpit_time#,#Blob#,#/@indicator_cockpit_time#,##,#Ampel Cockpit Zeit};{name#,#String#,#/@name#,##,#Name};{person_last_name#,#String#,##R#/manager/person/@last_name#,##,#Nachname [Projektleiter > Person]};{person_full_name#,#String#,##R#/manager/person/@full_name#,##,#Name [Projektleiter > Person]};{date_to#,#Date#,#/@date_to#,##,#Projektende};{date_from#,#Date#,#/@date_from#,##,#Projektstart};{hint_state_change#,#String#,#/@hint_state_change#,##,#Bemerkung letzer Statuswechsel};{data_interface_project_budget_actual#,#Double#,##R#/data_interface/@project_budget_actual#,##,#Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]};{data_interface_project_budget_plan#,#Double#,##R#/data_interface/@project_budget_plan#,##,#Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]};{data_interface_is_progress_objective#,#Double#,##R#/data_interface/@is_progress_objective#,##,#Fertigstellung (Ist, objektiv) [Projektdaten (Projektzeitraum)]};{data_interface_plan_progress#,#Double#,##R#/data_interface/@plan_progress#,##,#Fertigstellung (Plan) [Projektdaten (Projektzeitraum)]};{planning_type#,#String#,#/@planning_type#,##,#Planungsart};{indicator_sheet_progress#,#Blob#,#/@indicator_sheet_progress#,##,#Ampel Bogen Fortschritt};{progress_plan#,#Double#,#/@progress_plan#,##,#Fertigstellung (Plan)};{progress_subjective#,#Double#,#/@progress_subjective#,##,#Fortschritt (subjektiv)};{number#,#String#,#/@number#,##,#Projektnummer}#:#]]></xml-property>
+            <xml-property name="queryText"><![CDATA[{/projects}#:#{id#,#String#,#/@id#,##,#_ID (projects_id)};{type#,#String#,#/@type#,##,#Projektart};{manager_id#,#String#,##R#/manager/@id#,##,#_ID (staffs_id) [Projektleiter]};{state#,#String#,#/@state#,##,#Projektstatus};{internal#,#Boolean#,#/@internal#,##,#Projekttyp (intern/ extern)};{priority#,#String#,#/@priority#,##,#Priorität};{name#,#String#,#/@name#,##,#Name};{person_last_name#,#String#,##R#/manager/person/@last_name#,##,#Nachname [Projektleiter > Person]};{person_full_name#,#String#,##R#/manager/person/@full_name#,##,#Name [Projektleiter > Person]};{date_to#,#Date#,#/@date_to#,##,#Projektende};{date_from#,#Date#,#/@date_from#,##,#Projektstart};{hint_state_change#,#String#,#/@hint_state_change#,##,#Bemerkung letzer Statuswechsel};{data_interface_project_budget_actual#,#Double#,##R#/data_interface/@project_budget_actual#,##,#Projekt-Budget (Ist) [Projektdaten (Projektzeitraum)]};{data_interface_project_budget_plan#,#Double#,##R#/data_interface/@project_budget_plan#,##,#Projekt-Budget (Plan) [Projektdaten (Projektzeitraum)]};{planning_type#,#String#,#/@planning_type#,##,#Planungsart};{progress_plan#,#Double#,#/@progress_plan#,##,#Fertigstellung (Plan)};{progress_subjective#,#Double#,#/@progress_subjective#,##,#Fortschritt (subjektiv)};{number#,#String#,#/@number#,##,#Projektnummer}#:#]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -2210,12 +2123,6 @@
                     <text-property name="heading">Fertigstellung Ist</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">task_data_date_to_as_date</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                    <text-property name="heading">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                </structure>
-                <structure>
                     <property name="columnName">project_id</property>
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">_ID (projects_id) [Projekt]</text-property>
@@ -2250,12 +2157,6 @@
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">Ist abgeschlossen</text-property>
                     <text-property name="heading">Ist abgeschlossen</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">task_data_description</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">Beschreibung [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                    <text-property name="heading">Beschreibung [Aktivitätendaten (zeitraumbezogen)]</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">date_from</property>
@@ -2379,46 +2280,41 @@
                     </structure>
                     <structure>
                         <property name="position">3</property>
-                        <property name="name">task_data_date_to_as_date</property>
-                        <property name="dataType">date</property>
-                    </structure>
-                    <structure>
-                        <property name="position">4</property>
                         <property name="name">project_id</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">5</property>
+                        <property name="position">4</property>
                         <property name="name">name</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">6</property>
+                        <property name="position">5</property>
                         <property name="name">date_to</property>
                         <property name="dataType">date</property>
                     </structure>
                     <structure>
-                        <property name="position">7</property>
+                        <property name="position">6</property>
                         <property name="name">overdue</property>
                         <property name="dataType">boolean</property>
                     </structure>
                     <structure>
-                        <property name="position">8</property>
+                        <property name="position">7</property>
                         <property name="name">milestone</property>
                         <property name="dataType">boolean</property>
                     </structure>
                     <structure>
-                        <property name="position">9</property>
+                        <property name="position">8</property>
                         <property name="name">is_finished</property>
                         <property name="dataType">boolean</property>
                     </structure>
                     <structure>
-                        <property name="position">10</property>
+                        <property name="position">9</property>
                         <property name="name">task_data_description</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">11</property>
+                        <property name="position">10</property>
                         <property name="name">date_from</property>
                         <property name="dataType">date</property>
                     </structure>
@@ -2442,69 +2338,62 @@
                 </structure>
                 <structure>
                     <property name="position">3</property>
-                    <property name="name">task_data_date_to_as_date</property>
-                    <property name="nativeName">task_data_date_to_as_date</property>
-                    <property name="dataType">date</property>
-                    <property name="nativeDataType">91</property>
-                </structure>
-                <structure>
-                    <property name="position">4</property>
                     <property name="name">project_id</property>
                     <property name="nativeName">project_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">5</property>
+                    <property name="position">4</property>
                     <property name="name">name</property>
                     <property name="nativeName">name</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">6</property>
+                    <property name="position">5</property>
                     <property name="name">date_to</property>
                     <property name="nativeName">date_to</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
                 </structure>
                 <structure>
-                    <property name="position">7</property>
+                    <property name="position">6</property>
                     <property name="name">overdue</property>
                     <property name="nativeName">overdue</property>
                     <property name="dataType">boolean</property>
                     <property name="nativeDataType">16</property>
                 </structure>
                 <structure>
-                    <property name="position">8</property>
+                    <property name="position">7</property>
                     <property name="name">milestone</property>
                     <property name="nativeName">milestone</property>
                     <property name="dataType">boolean</property>
                     <property name="nativeDataType">16</property>
                 </structure>
                 <structure>
-                    <property name="position">9</property>
+                    <property name="position">8</property>
                     <property name="name">is_finished</property>
                     <property name="nativeName">is_finished</property>
                     <property name="dataType">boolean</property>
                     <property name="nativeDataType">16</property>
                 </structure>
                 <structure>
-                    <property name="position">10</property>
+                    <property name="position">9</property>
                     <property name="name">task_data_description</property>
                     <property name="nativeName">task_data_description</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">11</property>
+                    <property name="position">10</property>
                     <property name="name">date_from</property>
                     <property name="nativeName">date_from</property>
                     <property name="dataType">date</property>
                     <property name="nativeDataType">91</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[{/tasks}#:#{id#,#String#,#/@id#,##,#_ID (tasks_id)};{progress_subjective#,#Double#,#/@progress_subjective#,##,#Fertigstellung Ist};{task_data_date_to_as_date#,#Date#,##R#/task_data/@date_to_as_date#,##,#Enddatum [Aktivitätendaten (zeitraumbezogen)]};{project_id#,#String#,##R#/project/@id#,##,#_ID (projects_id) [Projekt]};{name#,#String#,#/@name#,##,#Name};{date_to#,#Date#,#/@date_to#,##,#Enddatum};{overdue#,#Boolean#,#/@overdue#,##,#Überfällig?};{milestone#,#Boolean#,#/@milestone#,##,#Meilenstein};{is_finished#,#Boolean#,#/@is_finished#,##,#Ist abgeschlossen};{task_data_description#,#String#,##R#/task_data/@description#,##,#Beschreibung [Aktivitätendaten (zeitraumbezogen)]};{date_from#,#Date#,#/@date_from#,##,#Startdatum}#:#]]></xml-property>
+            <xml-property name="queryText"><![CDATA[{/tasks}#:#{id#,#String#,#/@id#,##,#_ID (tasks_id)};{progress_subjective#,#Double#,#/@progress_subjective#,##,#Fertigstellung Ist};{project_id#,#String#,##R#/project/@id#,##,#_ID (projects_id) [Projekt]};{name#,#String#,#/@name#,##,#Name};{date_to#,#Date#,#/@date_to#,##,#Enddatum};{overdue#,#Boolean#,#/@overdue#,##,#Überfällig?};{milestone#,#Boolean#,#/@milestone#,##,#Meilenstein};{is_finished#,#Boolean#,#/@is_finished#,##,#Ist abgeschlossen};{task_data_description#,#String#,##R#/task_data/@description#,##,#Beschreibung [Aktivitätendaten (zeitraumbezogen)]};{date_from#,#Date#,#/@date_from#,##,#Startdatum}#:#]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -2771,20 +2660,6 @@
             </design:formattingHints>
           </design:usageHints>
         </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>task_data_date_to_as_date</design:name>
-              <design:position>3</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Enddatum [Aktivitätendaten (zeitraumbezogen)]</design:displayName>
-            </design:uiHints>
-          </design:attributes>
           <design:usageHints>
             <design:label>Enddatum [Aktivitätendaten (zeitraumbezogen)]</design:label>
             <design:formattingHints>
@@ -2814,22 +2689,10 @@
                     <text-property name="heading">Nachname [Verantwortlicher]</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">owner_full_name</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">Name [Verantwortlicher]</text-property>
-                    <text-property name="heading">Name [Verantwortlicher]</text-property>
-                </structure>
-                <structure>
                     <property name="columnName">project_id</property>
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">_ID (projects_id) [ToDo-Liste > Projekt]</text-property>
                     <text-property name="heading">_ID (projects_id) [ToDo-Liste > Projekt]</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">description</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">Beschreibung</text-property>
-                    <text-property name="heading">Beschreibung</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">due_date</property>
@@ -2878,12 +2741,6 @@
                     <property name="analysis">dimension</property>
                     <text-property name="displayName">Name [task]</text-property>
                     <text-property name="heading">Name [task]</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">owner_full_name_1</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">Name [Verantwortlicher]</text-property>
-                    <text-property name="heading">Name [Verantwortlicher]</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">state_final</property>
@@ -2995,66 +2852,51 @@
                     </structure>
                     <structure>
                         <property name="position">3</property>
-                        <property name="name">owner_full_name</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">4</property>
                         <property name="name">project_id</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">5</property>
-                        <property name="name">description</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">6</property>
+                        <property name="position">4</property>
                         <property name="name">due_date</property>
                         <property name="dataType">date-time</property>
                     </structure>
                     <structure>
-                        <property name="position">7</property>
+                        <property name="position">5</property>
                         <property name="name">state_overdue</property>
                         <property name="dataType">boolean</property>
                     </structure>
                     <structure>
-                        <property name="position">8</property>
+                        <property name="position">6</property>
                         <property name="name">todo_list_id</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">9</property>
+                        <property name="position">7</property>
                         <property name="name">start_date</property>
                         <property name="dataType">date-time</property>
                     </structure>
                     <structure>
-                        <property name="position">10</property>
+                        <property name="position">8</property>
                         <property name="name">state</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">11</property>
+                        <property name="position">9</property>
                         <property name="name">name</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">12</property>
+                        <property name="position">10</property>
                         <property name="name">task_id</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">13</property>
+                        <property name="position">11</property>
                         <property name="name">task_name</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
-                        <property name="position">14</property>
-                        <property name="name">owner_full_name_1</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">15</property>
+                        <property name="position">12</property>
                         <property name="name">state_final</property>
                         <property name="dataType">boolean</property>
                     </structure>
@@ -3079,97 +2921,76 @@
                 </structure>
                 <structure>
                     <property name="position">3</property>
-                    <property name="name">owner_full_name</property>
-                    <property name="nativeName">owner_full_name</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">4</property>
                     <property name="name">project_id</property>
                     <property name="nativeName">project_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">5</property>
-                    <property name="name">description</property>
-                    <property name="nativeName">description</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">6</property>
+                    <property name="position">4</property>
                     <property name="name">due_date</property>
                     <property name="nativeName">due_date</property>
                     <property name="dataType">date-time</property>
                     <property name="nativeDataType">93</property>
                 </structure>
                 <structure>
-                    <property name="position">7</property>
+                    <property name="position">5</property>
                     <property name="name">state_overdue</property>
                     <property name="nativeName">state_overdue</property>
                     <property name="dataType">boolean</property>
                     <property name="nativeDataType">16</property>
                 </structure>
                 <structure>
-                    <property name="position">8</property>
+                    <property name="position">6</property>
                     <property name="name">todo_list_id</property>
                     <property name="nativeName">todo_list_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">9</property>
+                    <property name="position">7</property>
                     <property name="name">start_date</property>
                     <property name="nativeName">start_date</property>
                     <property name="dataType">date-time</property>
                     <property name="nativeDataType">93</property>
                 </structure>
                 <structure>
-                    <property name="position">10</property>
+                    <property name="position">8</property>
                     <property name="name">state</property>
                     <property name="nativeName">state</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">11</property>
+                    <property name="position">9</property>
                     <property name="name">name</property>
                     <property name="nativeName">name</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">12</property>
+                    <property name="position">10</property>
                     <property name="name">task_id</property>
                     <property name="nativeName">task_id</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">13</property>
+                    <property name="position">11</property>
                     <property name="name">task_name</property>
                     <property name="nativeName">task_name</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
-                    <property name="position">14</property>
-                    <property name="name">owner_full_name_1</property>
-                    <property name="nativeName">owner_full_name_1</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">15</property>
+                    <property name="position">12</property>
                     <property name="name">state_final</property>
                     <property name="nativeName">state_final</property>
                     <property name="dataType">boolean</property>
                     <property name="nativeDataType">16</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[{/todos}#:#{id#,#String#,#/@id#,##,#_ID (todos_id)};{owner_last_name#,#String#,##R#/owner/@last_name#,##,#Nachname [Verantwortlicher]};{owner_full_name#,#String#,##R#/owner/@full_name#,##,#Name [Verantwortlicher]};{project_id#,#String#,##R#/todo_list/project/@id#,##,#_ID (projects_id) [ToDo-Liste > Projekt]};{description#,#String#,#/@description#,##,#Beschreibung};{due_date#,#Timestamp#,#/@due_date#,##,#Fälligkeitsdatum};{state_overdue#,#Boolean#,#/@state_overdue#,##,#state_overdue};{todo_list_id#,#String#,##R#/todo_list/@id#,##,#_ID (todo_lists_id) [ToDo-Liste]};{start_date#,#Timestamp#,#/@start_date#,##,#Beginndatum};{state#,#String#,#/@state#,##,#Status};{name#,#String#,#/@name#,##,#Name};{task_id#,#String#,##R#/task/@id#,##,#_ID (tasks_id) [task]};{task_name#,#String#,##R#/task/@name#,##,#Name [task]};{owner_full_name_1#,#String#,##R#/owner/@full_name#,##,#Name [Verantwortlicher]};{state_final#,#Boolean#,#/@state_final#,##,#state_final}#:#]]></xml-property>
+            <xml-property name="queryText"><![CDATA[{/todos}#:#{id#,#String#,#/@id#,##,#_ID (todos_id)};{owner_last_name#,#String#,##R#/owner/@last_name#,##,#Nachname [Verantwortlicher]};{project_id#,#String#,##R#/todo_list/project/@id#,##,#_ID (projects_id) [ToDo-Liste > Projekt]};{due_date#,#Timestamp#,#/@due_date#,##,#Fälligkeitsdatum};{state_overdue#,#Boolean#,#/@state_overdue#,##,#state_overdue};{todo_list_id#,#String#,##R#/todo_list/@id#,##,#_ID (todo_lists_id) [ToDo-Liste]};{start_date#,#Timestamp#,#/@start_date#,##,#Beginndatum};{state#,#String#,#/@state#,##,#Status};{name#,#String#,#/@name#,##,#Name};{task_id#,#String#,##R#/task/@id#,##,#_ID (tasks_id) [task]};{task_name#,#String#,##R#/task/@name#,##,#Name [task]};{state_final#,#Boolean#,#/@state_final#,##,#state_final}#:#]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -3835,651 +3656,6 @@
   </design:ResultSets>
 </model:DesignValues>]]></xml-property>
         </oda-data-set>
-        <oda-data-set extensionID="net.proventis.report.birt.driver.dataSet" name="Kontext" id="959">
-            <list-property name="computedColumns">
-                <structure>
-                    <property name="name">date_today</property>
-                    <expression name="expression">new Date()</expression>
-                    <property name="dataType">date</property>
-                </structure>
-            </list-property>
-            <list-property name="columnHints">
-                <structure>
-                    <property name="columnName">current_user_id</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">_ID (users_id) [Aktueller Benutzer]</text-property>
-                    <text-property name="heading">_ID (users_id) [Aktueller Benutzer]</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">person_id</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">_ID (persons_id) [Aktueller Benutzer > Person]</text-property>
-                    <text-property name="heading">_ID (persons_id) [Aktueller Benutzer > Person]</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">company_logo</property>
-                    <property name="analysis">attribute</property>
-                    <text-property name="displayName">Firmen-Logo</text-property>
-                    <text-property name="heading">Firmen-Logo</text-property>
-                </structure>
-            </list-property>
-            <list-property name="parameters">
-                <structure>
-                    <property name="name">current_project_id</property>
-                    <property name="nativeName">current_project_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">1</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">selected_person_id</property>
-                    <property name="nativeName">selected_person_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">2</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_invoice_customer_id</property>
-                    <property name="nativeName">current_invoice_customer_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">3</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_invoice_id</property>
-                    <property name="nativeName">current_invoice_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">4</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_program_id</property>
-                    <property name="nativeName">current_program_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">5</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_portfolio_id</property>
-                    <property name="nativeName">current_portfolio_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">6</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_quote_id</property>
-                    <property name="nativeName">current_quote_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">7</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_ticket_id</property>
-                    <property name="nativeName">current_ticket_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">8</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_user_id</property>
-                    <property name="nativeName">current_user_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">9</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_voucher_collective_id</property>
-                    <property name="nativeName">current_voucher_collective_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">10</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_order_id</property>
-                    <property name="nativeName">current_order_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">11</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">effective_user_id</property>
-                    <property name="nativeName">effective_user_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">12</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">current_project_status_report_id</property>
-                    <property name="nativeName">current_project_status_report_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                    <property name="position">13</property>
-                    <expression name="defaultValue" type="constant">__no_value__</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-                <structure>
-                    <property name="name">ignore_filtered_results</property>
-                    <property name="nativeName">ignore_filtered_results</property>
-                    <property name="nativeDataType">16</property>
-                    <property name="position">14</property>
-                    <expression name="defaultValue" type="constant">false</expression>
-                    <property name="isOptional">true</property>
-                    <property name="allowNull">true</property>
-                    <property name="isInput">true</property>
-                </structure>
-            </list-property>
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">current_user_id</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">person_id</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">3</property>
-                        <property name="name">company_logo</property>
-                        <property name="dataType">blob</property>
-                    </structure>
-                    <structure>
-                        <property name="position">4</property>
-                        <property name="name">date_today</property>
-                        <property name="dataType">date</property>
-                    </structure>
-                </list-property>
-            </structure>
-            <property name="dataSource">Data Source</property>
-            <list-property name="resultSet">
-                <structure>
-                    <property name="position">1</property>
-                    <property name="name">current_user_id</property>
-                    <property name="nativeName">current_user_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">2</property>
-                    <property name="name">person_id</property>
-                    <property name="nativeName">person_id</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">3</property>
-                    <property name="name">company_logo</property>
-                    <property name="nativeName">company_logo</property>
-                    <property name="dataType">blob</property>
-                    <property name="nativeDataType">2004</property>
-                </structure>
-            </list-property>
-            <xml-property name="queryText"><![CDATA[{/context}#:#{current_user_id#,#String#,##R#/current_user/@id#,##,#_ID (users_id) [Aktueller Benutzer]};{person_id#,#String#,##R#/current_user/person/@id#,##,#_ID (persons_id) [Aktueller Benutzer > Person]};{company_logo#,#Blob#,#/@company_logo#,##,#Firmen-Logo}#:#]]></xml-property>
-            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
-  <Version>2.0</Version>
-  <DataSetParameters>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_project_id</design:name>
-            <design:position>1</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>selected_person_id</design:name>
-            <design:position>2</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_invoice_customer_id</design:name>
-            <design:position>3</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_invoice_id</design:name>
-            <design:position>4</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_program_id</design:name>
-            <design:position>5</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_portfolio_id</design:name>
-            <design:position>6</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_quote_id</design:name>
-            <design:position>7</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_ticket_id</design:name>
-            <design:position>8</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_user_id</design:name>
-            <design:position>9</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_voucher_collective_id</design:name>
-            <design:position>10</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_order_id</design:name>
-            <design:position>11</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>effective_user_id</design:name>
-            <design:position>12</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>current_project_status_report_id</design:name>
-            <design:position>13</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>__no_value__</design:values>
-              <design:values>__no_value__</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-    <parameter>
-      <design:ParameterDefinition>
-        <design:inOutMode>In</design:inOutMode>
-        <design:attributes>
-          <design:identifier>
-            <design:name>ignore_filtered_results</design:name>
-            <design:position>14</design:position>
-          </design:identifier>
-          <design:nativeDataTypeCode>16</design:nativeDataTypeCode>
-          <design:precision>-1</design:precision>
-          <design:scale>-1</design:scale>
-          <design:nullability>Nullable</design:nullability>
-        </design:attributes>
-        <design:inputAttributes>
-          <design:elementAttributes>
-            <design:defaultValues>
-              <design:values>false</design:values>
-              <design:values>false</design:values>
-            </design:defaultValues>
-            <design:optional>true</design:optional>
-          </design:elementAttributes>
-        </design:inputAttributes>
-      </design:ParameterDefinition>
-    </parameter>
-  </DataSetParameters>
-  <design:ResultSets derivedMetaData="true">
-    <design:resultSetDefinitions>
-      <design:resultSetColumns>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>current_user_id</design:name>
-              <design:position>1</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>_ID (users_id) [Aktueller Benutzer]</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>_ID (users_id) [Aktueller Benutzer]</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>person_id</design:name>
-              <design:position>2</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>_ID (persons_id) [Aktueller Benutzer > Person]</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>_ID (persons_id) [Aktueller Benutzer > Person]</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-        <design:resultColumnDefinitions>
-          <design:attributes>
-            <design:identifier>
-              <design:name>company_logo</design:name>
-              <design:position>3</design:position>
-            </design:identifier>
-            <design:nativeDataTypeCode>2004</design:nativeDataTypeCode>
-            <design:precision>-1</design:precision>
-            <design:scale>-1</design:scale>
-            <design:nullability>Unknown</design:nullability>
-            <design:uiHints>
-              <design:displayName>Firmen-Logo</design:displayName>
-            </design:uiHints>
-          </design:attributes>
-          <design:usageHints>
-            <design:label>Firmen-Logo</design:label>
-            <design:formattingHints>
-              <design:displaySize>-1</design:displaySize>
-            </design:formattingHints>
-          </design:usageHints>
-        </design:resultColumnDefinitions>
-      </design:resultSetColumns>
-      <design:criteria/>
-    </design:resultSetDefinitions>
-  </design:ResultSets>
-</model:DesignValues>]]></xml-property>
-        </oda-data-set>
         <oda-data-set extensionID="net.proventis.report.birt.driver.dataSet" name="Auftraggeber" id="971">
             <list-property name="columnHints">
                 <structure>
@@ -4917,18 +4093,6 @@
                                 <property name="dataType">string</property>
                             </structure>
                             <structure>
-                                <property name="name">indicator_cockpit_costs</property>
-                                <text-property name="displayName">Ampel Cockpit Kosten</text-property>
-                                <expression name="expression" type="javascript">dataSetRow["indicator_cockpit_costs"]</expression>
-                                <property name="dataType">blob</property>
-                            </structure>
-                            <structure>
-                                <property name="name">indicator_cockpit_time</property>
-                                <text-property name="displayName">Ampel Cockpit Zeit</text-property>
-                                <expression name="expression" type="javascript">dataSetRow["indicator_cockpit_time"]</expression>
-                                <property name="dataType">blob</property>
-                            </structure>
-                            <structure>
                                 <property name="name">name</property>
                                 <text-property name="displayName">Name</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["name"]</expression>
@@ -4977,42 +4141,10 @@
                                 <property name="dataType">float</property>
                             </structure>
                             <structure>
-                                <property name="name">data_interface_is_progress_objective</property>
-                                <text-property name="displayName">Fertigstellung (Ist, objektiv) [Projektdaten (Projektzeitraum)]</text-property>
-                                <expression name="expression" type="javascript">dataSetRow["data_interface_is_progress_objective"]</expression>
-                                <property name="dataType">float</property>
-                            </structure>
-                            <structure>
-                                <property name="name">data_interface_plan_progress</property>
-                                <text-property name="displayName">Fertigstellung (Plan) [Projektdaten (Projektzeitraum)]</text-property>
-                                <expression name="expression" type="javascript">dataSetRow["data_interface_plan_progress"]</expression>
-                                <property name="dataType">float</property>
-                            </structure>
-                            <structure>
                                 <property name="name">planning_type</property>
                                 <text-property name="displayName">Planungsart</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["planning_type"]</expression>
                                 <property name="dataType">string</property>
-                            </structure>
-                            <structure>
-                                <property name="name">report-title</property>
-                                <text-property name="displayName">report-title</text-property>
-                                <expression name="expression" type="javascript">"Projektdashboard " + dataSetRow["project_name_and_number"] + " - " + dataSetRow["state"]</expression>
-                                <property name="dataType">string</property>
-                                <property name="allowExport">true</property>
-                            </structure>
-                            <structure>
-                                <property name="name">Report-Date</property>
-                                <text-property name="displayName">Report-Date</text-property>
-                                <expression name="expression" type="javascript">new Date()</expression>
-                                <property name="dataType">date</property>
-                                <property name="allowExport">true</property>
-                            </structure>
-                            <structure>
-                                <property name="name">indicator_sheet_progress</property>
-                                <text-property name="displayName">Ampel Bogen Fortschritt</text-property>
-                                <expression name="expression" type="javascript">dataSetRow["indicator_sheet_progress"]</expression>
-                                <property name="dataType">blob</property>
                             </structure>
                             <structure>
                                 <property name="name">progress_plan</property>
@@ -5043,6 +4175,20 @@
                                 <text-property name="displayName">project_time</text-property>
                                 <expression name="expression" type="javascript">dataSetRow["project_time"]</expression>
                                 <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">report-title</property>
+                                <text-property name="displayName">report-title</text-property>
+                                <expression name="expression" type="javascript">"Projektdashboard " + dataSetRow["project_name_and_number"] + " - " + dataSetRow["state"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Report-Date</property>
+                                <text-property name="displayName">Report-Date</text-property>
+                                <expression name="expression" type="javascript">new Date()</expression>
+                                <property name="dataType">date</property>
+                                <property name="allowExport">true</property>
                             </structure>
                         </list-property>
                         <group id="67">
@@ -6643,6 +5789,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
       <Stacked>false</Stacked>
     </Series>
     <Grouping>
+      <Enabled>true</Enabled>
       <GroupType>Text</GroupType>
       <AggregateExpression>Sum</AggregateExpression>
     </Grouping>
@@ -6784,12 +5931,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                     <text-property name="displayName">Fertigstellung Ist</text-property>
                                                     <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
                                                     <property name="dataType">float</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">task_data_date_to_as_date</property>
-                                                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
-                                                    <property name="dataType">date</property>
                                                 </structure>
                                                 <structure>
                                                     <property name="name">project_id</property>
@@ -7110,12 +6251,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                     <text-property name="displayName">Fertigstellung Ist</text-property>
                                                     <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
                                                     <property name="dataType">float</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">task_data_date_to_as_date</property>
-                                                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
-                                                    <property name="dataType">date</property>
                                                 </structure>
                                                 <structure>
                                                     <property name="name">project_id</property>
@@ -7547,21 +6682,9 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                             <property name="dataType">string</property>
                                                         </structure>
                                                         <structure>
-                                                            <property name="name">owner_full_name</property>
-                                                            <text-property name="displayName">Name [Verantwortlicher]</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["owner_full_name"]</expression>
-                                                            <property name="dataType">string</property>
-                                                        </structure>
-                                                        <structure>
                                                             <property name="name">project_id</property>
                                                             <text-property name="displayName">_ID (projects_id) [ToDo-Liste > Projekt]</text-property>
                                                             <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
-                                                            <property name="dataType">string</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">description</property>
-                                                            <text-property name="displayName">Beschreibung</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["description"]</expression>
                                                             <property name="dataType">string</property>
                                                         </structure>
                                                         <structure>
@@ -7612,12 +6735,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                             <property name="name">task_name</property>
                                                             <text-property name="displayName">Name [task]</text-property>
                                                             <expression name="expression" type="javascript">dataSetRow["task_name"]</expression>
-                                                            <property name="dataType">string</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">owner_full_name_1</property>
-                                                            <text-property name="displayName">Name [Verantwortlicher]</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["owner_full_name_1"]</expression>
                                                             <property name="dataType">string</property>
                                                         </structure>
                                                         <structure>
@@ -7788,12 +6905,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                     <text-property name="displayName">Fertigstellung Ist</text-property>
                                                     <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
                                                     <property name="dataType">float</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">task_data_date_to_as_date</property>
-                                                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
-                                                    <property name="dataType">date</property>
                                                 </structure>
                                                 <structure>
                                                     <property name="name">project_id</property>
@@ -8056,12 +7167,6 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                     <text-property name="displayName">Fertigstellung Ist</text-property>
                                                     <expression name="expression" type="javascript">dataSetRow["progress_subjective"]</expression>
                                                     <property name="dataType">float</property>
-                                                </structure>
-                                                <structure>
-                                                    <property name="name">task_data_date_to_as_date</property>
-                                                    <text-property name="displayName">Enddatum [Aktivitätendaten (zeitraumbezogen)]</text-property>
-                                                    <expression name="expression" type="javascript">dataSetRow["task_data_date_to_as_date"]</expression>
-                                                    <property name="dataType">date</property>
                                                 </structure>
                                                 <structure>
                                                     <property name="name">project_id</property>
@@ -8467,21 +7572,9 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                             <property name="dataType">string</property>
                                                         </structure>
                                                         <structure>
-                                                            <property name="name">owner_full_name</property>
-                                                            <text-property name="displayName">Name [Verantwortlicher]</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["owner_full_name"]</expression>
-                                                            <property name="dataType">string</property>
-                                                        </structure>
-                                                        <structure>
                                                             <property name="name">project_id</property>
                                                             <text-property name="displayName">_ID (projects_id) [ToDo-Liste > Projekt]</text-property>
                                                             <expression name="expression" type="javascript">dataSetRow["project_id"]</expression>
-                                                            <property name="dataType">string</property>
-                                                        </structure>
-                                                        <structure>
-                                                            <property name="name">description</property>
-                                                            <text-property name="displayName">Beschreibung</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["description"]</expression>
                                                             <property name="dataType">string</property>
                                                         </structure>
                                                         <structure>
@@ -8534,10 +7627,10 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                             <property name="dataType">string</property>
                                                         </structure>
                                                         <structure>
-                                                            <property name="name">owner_full_name_1</property>
-                                                            <text-property name="displayName">Name [Verantwortlicher]</text-property>
-                                                            <expression name="expression" type="javascript">dataSetRow["owner_full_name_1"]</expression>
-                                                            <property name="dataType">string</property>
+                                                            <property name="name">state_final</property>
+                                                            <text-property name="displayName">state_final</text-property>
+                                                            <expression name="expression" type="javascript">dataSetRow["state_final"]</expression>
+                                                            <property name="dataType">boolean</property>
                                                         </structure>
                                                     </list-property>
                                                     <list-property name="sort">
