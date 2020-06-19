@@ -7644,7 +7644,7 @@ function beforeDrawDataPointLabel( dph, label, icsc ) {&#xD;
                                                             <property name="operator">gt</property>
                                                             <expression name="expr" type="javascript">row["due_date"]</expression>
                                                             <simple-property-list name="value1">
-                                                                <value>row._outer._outer._outer._outer["date_today"]</value>
+                                                                <value>row._outer._outer._outer["Report-Date"]</value>
                                                             </simple-property-list>
                                                             <property name="updateAggregation">true</property>
                                                         </structure>
